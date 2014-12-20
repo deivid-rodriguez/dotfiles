@@ -16,14 +16,29 @@ if [ -n "$BASH_VERSION" ]; then
   fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-  PATH="$HOME/bin:$PATH"
-fi
+#
+# Environment variables needed for Linuxbrew
+#
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
-shopt -s nullglob
-for f in $HOME/.profile.d/*.sh
-do
-  source "$f"
-done
-shopt -u nullglob
+#
+# Alias hub to git
+#
+eval "$(hub alias -s)"
+
+#
+# Cloud 66
+#
+source '/usr/local/cloud66/completion.bash.inc'
+
+#
+# Add RVM to PATH for scripting
+#
+export PATH="$PATH:$HOME/.rvm/bin"
+
+#
+# Load RVM into a shell session.
+#
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
