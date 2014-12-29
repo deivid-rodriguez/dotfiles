@@ -48,6 +48,9 @@ Bundle 'slim-template/vim-slim'
 " All vim.org colorschemes
 Bundle 'flazz/vim-colorschemes'
 
+" Ctags generation
+Bundle 'szw/vim-tags'
+
 " required right after vundle plugins
 filetype plugin indent on
 
@@ -130,16 +133,6 @@ function! EditProfile()
   endif
 endfunction
 map .p :call EditProfile()<CR>
-
-"-------------------------------------------------------------------------------
-" ctags
-"-------------------------------------------------------------------------------
-function! GenCtags()
-  let cmd = 'ctags -R --exclude=.git --exclude=log -f .tags --fields=+iaS * ./.rvm/gems/ruby-2.0.0-p247/gems'
-  let output=system(cmd)
-endfunction
-map <C-F12> :call GenCtags()<CR>
-set tags+=.tags
 
 "-------------------------------------------------------------------------------
 " colorscheme
