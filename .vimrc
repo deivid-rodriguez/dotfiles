@@ -168,7 +168,7 @@ autocmd FileType make set nolist
 " Configure Ctrl-P
 "-------------------------------------------------------------------------------
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\v[\/](vendor)$'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 "-------------------------------------------------------------------------------
 " Configure UltiSnips
