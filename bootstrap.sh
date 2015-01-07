@@ -5,8 +5,8 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function syncIt() {
-  rsync --exclude ".git/" --exclude "bootstrap.sh" \
-        --exclude "LICENSE" -avh --no-perms . ~;
+  rsync --exclude ".git/" --exclude "bootstrap.sh" --exclude "LICENSE" \
+        --exclude "rails_template.rb" -avh --no-perms . ~;
 }
 
 function sourceIt() {
