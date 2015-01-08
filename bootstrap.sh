@@ -5,8 +5,12 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function syncIt() {
-  rsync --exclude ".git/" --exclude "bootstrap.sh" --exclude "LICENSE" \
-        --exclude "rails_template.rb" -avh --no-perms . ~;
+  list=`find dotfiles -maxdepth 1 -mindepth 1`;
+
+  for f in $list
+  do
+    cp -r $f ~/.$(basename $f);
+  done
 }
 
 function sourceIt() {
