@@ -5,9 +5,15 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function syncIt() {
-  list=`find dotfiles -maxdepth 1 -mindepth 1`;
+  dirs=`find dotfiles -maxdepth 1 -mindepth 1 -type d`;
 
-  for f in $list
+  for d in $dirs
+  do
+    cp -r $d/. ~/.$(basename $d)
+  done
+
+  files=`find dotfiles -maxdepth 1 -mindepth 1 -type f`;
+  for f in $files
   do
     cp -r $f ~/.$(basename $f);
   done
