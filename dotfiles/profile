@@ -26,11 +26,6 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 eval "$(hub alias -s)"
 
 #
-# Cloud 66
-#
-source '/usr/local/cloud66/completion.bash.inc'
-
-#
 # Add RVM to PATH for scripting
 #
 export PATH="$PATH:$HOME/.rvm/bin"
