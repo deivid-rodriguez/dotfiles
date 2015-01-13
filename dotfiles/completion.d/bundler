@@ -24,7 +24,7 @@ __bundle() {
   else
     if [[ -z $bundle_command || $bundle_command = help ]]; then
       options="help install update package exec config check list show
-               console open viz init gem"
+               console open viz init gem outdated"
     fi
   fi
   COMPREPLY=($(compgen -W "$options" -- "$cur"))
