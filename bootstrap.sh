@@ -2,7 +2,10 @@
 
 cd "$(dirname "${BASH_SOURCE}")"
 
-git pull origin master
+if [ "$1" != 'local' ]
+then
+  git pull origin master
+fi
 
 function syncIt() {
   dirs=`find dotfiles -maxdepth 1 -mindepth 1 -type d`
