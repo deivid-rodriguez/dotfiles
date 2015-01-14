@@ -21,7 +21,7 @@ Bundle 'gmarik/vundle'
 " Enabled plugins
 "===============================================================================
 
-" Track UltiSnips the engine
+" Track UltiSnips (the engine)
 Bundle 'SirVer/ultisnips'
 
 " Snippets are separated from the engine
