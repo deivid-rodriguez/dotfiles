@@ -21,12 +21,6 @@ Bundle 'gmarik/vundle'
 " Enabled plugins
 "===============================================================================
 
-" Track UltiSnips (the engine)
-Bundle 'SirVer/ultisnips'
-
-" Snippets are separated from the engine
-Bundle 'honza/vim-snippets'
-
 " Fuzzy file, buffer, mru, tag finder
 Bundle 'kien/ctrlp.vim'
 
@@ -50,6 +44,18 @@ Bundle 'flazz/vim-colorschemes'
 
 " Ctags generation
 Bundle 'szw/vim-tags'
+
+" Every completion with Tab (Integrates YouCompleteme & Ultisnips)
+Bundle 'ervandew/supertab'
+
+" Automatic completion
+Bundle 'Valloric/YouCompleteMe'
+
+" Track UltiSnips (the engine)
+Bundle 'SirVer/ultisnips'
+
+" Snippets are separated from the engine
+Bundle 'honza/vim-snippets'
 
 " required right after vundle plugins
 filetype plugin indent on
@@ -163,6 +169,13 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 autocmd FileType make set noexpandtab
 autocmd FileType make set nolist
+
+"-------------------------------------------------------------------------------
+" make YCM compatible with UltiSnips (using supertab)
+"-------------------------------------------------------------------------------
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "-------------------------------------------------------------------------------
 " Configure Ctrl-P
