@@ -7,7 +7,10 @@
 "===============================================================================
 " Plugin Manager (vundle) configuration
 "===============================================================================
+
+" Running vim, not vi!¡
 set nocompatible
+
 filetype off
 
 " Set the runtime path to include Vundle and initialize
@@ -54,12 +57,17 @@ Bundle 'SirVer/ultisnips'
 " Snippets are separated from the engine
 Bundle 'honza/vim-snippets'
 
-" required right after vundle plugins
+" Enable filetype detection and filetype-specific indenting & plugins. Required
+" right after vundle plugins
 filetype plugin indent on
+
+" Enable syntax highlighting
+syntax on
 
 "===============================================================================
 " General editing configurations
 "===============================================================================
+
 " Set map leader
 let mapleader = ','
 let g:mapleader = ','
@@ -90,15 +98,11 @@ set encoding=utf-8
 set exrc                  " enable per-directory .vimrc files
 set secure                " disable unsafe commands in local .vimrc files
 set columns=160
-set guifont=Monospace\ 8
 set mousemodel=popup
-
 
 "-------------------------------------------------------------------------------
 " Syntax
 "-------------------------------------------------------------------------------
-syntax on
-
 autocmd BufNewFile,BufRead *.ini silent! set syntax=cfg
 
 set synmaxcol=500 " No resaltar sintaxis en lineas largas (performance)
