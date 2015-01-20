@@ -1,0 +1,32 @@
+snippet debug "Adds a byebug breakpoint"
+require 'byebug'; byebug
+endsnippet
+
+snippet desc "Adds a RSpec describe block"
+describe '${1}' do
+	$2
+end
+endsnippet
+
+snippet bef "Adds a RSpec before block"
+before { $1 }
+endsnippet
+
+snippet context "Adds an RSpec context block"
+context '${1}' do
+	$2
+end
+endsnippet
+
+
+snippet it "Adds an RSpec it block"
+it '${1}' do
+	$2
+end
+endsnippet
+
+snippet def "Adds a new method"
+def $1
+	$2
+end
+endsnippet
