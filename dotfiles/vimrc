@@ -93,13 +93,11 @@ set secure                " disable unsafe commands in local .vimrc files
 "-------------------------------------------------------------------------------
 " Syntax
 "-------------------------------------------------------------------------------
-if has("syntax")
-  syntax on
+syntax on
 
-  autocmd BufNewFile,BufRead *.ini silent! set syntax=cfg
+autocmd BufNewFile,BufRead *.ini silent! set syntax=cfg
 
-  set synmaxcol=500 " No resaltar sintaxis en lineas largas (performance)
-endif
+set synmaxcol=500 " No resaltar sintaxis en lineas largas (performance)
 
 "-------------------------------------------------------------------------------
 " no backup
