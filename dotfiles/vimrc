@@ -89,6 +89,10 @@ set wildmode=list:longest " bash-like completion
 set encoding=utf-8
 set exrc                  " enable per-directory .vimrc files
 set secure                " disable unsafe commands in local .vimrc files
+set columns=160
+set guifont=Monospace\ 8
+set mousemodel=popup
+
 
 "-------------------------------------------------------------------------------
 " Syntax
