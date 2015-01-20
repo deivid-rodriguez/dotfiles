@@ -15,6 +15,8 @@ filetype off
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim/
+
+" Start requiring Vundle plugins
 call vundle#begin()
 
 " Let Vundle manage Vundle, required
@@ -59,6 +61,9 @@ Bundle 'SirVer/ultisnips'
 
 " Snippets are separated from the engine
 Bundle 'honza/vim-snippets'
+
+" Finish requiring Vundle plugins
+call vundle#end()
 
 " Enable filetype detection and filetype-specific indenting & plugins. Required
 " right after vundle plugins
