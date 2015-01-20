@@ -212,6 +212,7 @@ let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<S-tab>'
 let g:UltiSnipsListSnippets='<c-tab>'
+let g:UltiSnipsEnableSnipMate='0'
 
 "-------------------------------------------------------------------------------
 " Settings for specific dirs
