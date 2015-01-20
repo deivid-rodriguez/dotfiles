@@ -36,6 +36,9 @@ Plugin 'vim-ruby/vim-ruby'
 " Rails Enhancements
 Plugin 'tpope/vim-rails'
 
+" Rake enhancements
+Plugin 'tpope/vim-rake'
+
 " Markdown Enhancements
 Plugin 'plasticboy/vim-markdown'
 
