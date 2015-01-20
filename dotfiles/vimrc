@@ -11,39 +11,39 @@ set nocompatible
 filetype off
 
 " Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " Let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "===============================================================================
 " Enabled plugins
 "===============================================================================
 
 " Fuzzy file, buffer, mru, tag finder
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " BufExplorer
-Bundle 'jlanzarotta/bufexplorer'
+Plugin 'jlanzarotta/bufexplorer'
 
 " Ruby Enhancements
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 
 " Rails Enhancements
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 
 " Markdown Enhancements
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 
 " Slim Template Engine syntax
-Bundle 'slim-template/vim-slim'
+Plugin 'slim-template/vim-slim'
 
 " All vim.org colorschemes
-Bundle 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 
 " Ctags generation
-Bundle 'szw/vim-tags'
+Plugin 'szw/vim-tags'
 
 " Every completion with Tab (Integrates YouCompleteme & Ultisnips)
 Bundle 'ervandew/supertab'
