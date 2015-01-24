@@ -50,12 +50,6 @@ Plugin 'slim-template/vim-slim'
 " Ctags generation
 Plugin 'szw/vim-tags'
 
-" Every completion with Tab (Integrates YouCompleteme & Ultisnips)
-Bundle 'ervandew/supertab'
-
-" Automatic completion
-Bundle 'Valloric/YouCompleteMe'
-
 " Track UltiSnips (the engine)
 Bundle 'SirVer/ultisnips'
 
