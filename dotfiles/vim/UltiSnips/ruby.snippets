@@ -2,31 +2,34 @@ snippet debug "Adds a byebug breakpoint"
 require 'byebug'; byebug
 endsnippet
 
-snippet desc "Adds a RSpec describe block"
+snippet desc "Adds a RSpec describe block" b
 describe '${1}' do
 	$2
 end
 endsnippet
 
-snippet bef "Adds a RSpec before block"
+snippet bef "Adds a RSpec before block" b
 before { $1 }
 endsnippet
 
-snippet context "Adds an RSpec context block"
+snippet context "Adds an RSpec context block" b
 context '${1}' do
 	$2
 end
 endsnippet
 
-
-snippet it "Adds an RSpec it block"
+snippet it "Adds an RSpec it block" b
 it '${1}' do
 	$2
 end
 endsnippet
 
-snippet def "Adds a new method"
+snippet def "Adds a new method" b
 def $1
 	$2
 end
+endsnippet
+
+snippet # "A new interpolated string" i
+#\{$1\}
 endsnippet
