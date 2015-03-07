@@ -30,6 +30,14 @@ def $1
 end
 endsnippet
 
+snippet let "Adds a new RSpec let block" b
+let(:$1) { $2 }
+endsnippet
+
+snippet let! "Adds a new RSpec let! block" b
+let!(:$1) { $2 }
+endsnippet
+
 snippet # "A new interpolated string" i
 #\{$1\}
 endsnippet
