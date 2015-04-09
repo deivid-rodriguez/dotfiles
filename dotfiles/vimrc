@@ -148,7 +148,7 @@ map .p :call EditProfile()<CR>
 " colorscheme
 "-------------------------------------------------------------------------------
 if &diff
-  colorscheme peaksea
+  colorscheme jellybeans
 else
   colorscheme base16-railscasts
 endif
