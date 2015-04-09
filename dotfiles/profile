@@ -26,14 +26,14 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 eval "$(hub alias -s)"
 
 #
-# Add RVM to PATH for scripting
+# Enable chruby
 #
-export PATH="$PATH:$HOME/.rvm/bin"
+source $HOME/.linuxbrew/opt/chruby/share/chruby/chruby.sh
 
 #
-# Load RVM into a shell session.
+# Select default Ruby
 #
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+chruby 2.2.1
 
 #
 # Custom completion
