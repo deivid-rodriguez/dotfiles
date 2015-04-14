@@ -33,7 +33,7 @@ source $HOME/.linuxbrew/opt/chruby/share/chruby/chruby.sh
 #
 # Select default Ruby
 #
-chruby 2.2.1
+chruby 2.2
 
 #
 # Custom completion
