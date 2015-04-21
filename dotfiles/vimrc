@@ -50,6 +50,9 @@ Plugin 'slim-template/vim-slim'
 " Ctags generation
 Plugin 'szw/vim-tags'
 
+" Go stuff
+Plugin 'fatih/vim-go'
+
 " Track UltiSnips (the engine)
 Bundle 'SirVer/ultisnips'
 
