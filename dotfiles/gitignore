@@ -3,3 +3,6 @@
 
 # Vim
 tags
+
+# Ag
+.agignore
