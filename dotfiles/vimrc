@@ -8,9 +8,6 @@
 " Plugin Manager (vundle) configuration
 "===============================================================================
 
-" Running vim, not vi!¡
-set nocompatible
-
 filetype off
 
 " Set the runtime path to include Vundle and initialize
