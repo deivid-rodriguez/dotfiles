@@ -50,8 +50,11 @@ Plugin 'szw/vim-tags'
 " Go stuff
 Plugin 'fatih/vim-go'
 
-" Track UltiSnips (the engine)
-Plugin 'SirVer/ultisnips'
+" Until I find what's the issue with nvim
+if !has('nvim')
+  " Track UltiSnips (the engine)
+  Plugin 'SirVer/ultisnips'
+endif
 
 " Snippets are separated from the engine
 Plugin 'honza/vim-snippets'
