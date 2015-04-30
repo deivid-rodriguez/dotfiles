@@ -51,10 +51,10 @@ Plugin 'szw/vim-tags'
 Plugin 'fatih/vim-go'
 
 " Track UltiSnips (the engine)
-Bundle 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine
-Bundle 'honza/vim-snippets'
+Plugin 'honza/vim-snippets'
 
 " Finish requiring Vundle plugins
 call vundle#end()
