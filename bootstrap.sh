@@ -20,6 +20,13 @@ function syncIt() {
   do
     cp -r $f ~/.$(basename $f)
   done
+
+  links=`find dotfiles -maxdepth 1 -mindepth 1 -type l`
+  for l in $links
+  do
+    dest=`readlink -f $l`
+    ln -sf .$(basename $dest) ~/.$(basename $l)
+  done
 }
 
 function sourceIt() {
