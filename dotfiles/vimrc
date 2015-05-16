@@ -139,18 +139,6 @@ map ,c :retab<CR> :%s/  *$//<CR>  " clean tabs and spaces at end of line
 map ,n j0f"lct"
 
 "-------------------------------------------------------------------------------
-" shell profile
-"-------------------------------------------------------------------------------
-function! EditProfile()
-  if g:OS == "Linux"
-    exec "edit ~/.bashrc"
-  else
-    exec "edit ~/.profile"
-  endif
-endfunction
-map .p :call EditProfile()<CR>
-
-"-------------------------------------------------------------------------------
 " colorscheme
 "-------------------------------------------------------------------------------
 colorscheme hybrid
