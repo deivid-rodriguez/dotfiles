@@ -5,69 +5,70 @@
 "-------------------------------------------------------------------------------
 
 "===============================================================================
-" Plugin Manager (vundle) configuration
+" NeoBundle Manager configuration
 "===============================================================================
-
 filetype off
 
 " Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim/
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 
-" Start requiring Vundle plugins
-call vundle#begin()
+" Start requiring NeoBundle plugins
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+" Let NeoBundle manage NeoBundle, required
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 "===============================================================================
 " Enabled plugins
 "===============================================================================
 
 " Preferred colorscheme
-Plugin 'w0ng/vim-hybrid'
+NeoBundle 'w0ng/vim-hybrid'
 
 " Fuzzy file, buffer, mru, tag finder
-Plugin 'kien/ctrlp.vim'
+NeoBundle 'kien/ctrlp.vim'
 
 " BufExplorer
-Plugin 'jlanzarotta/bufexplorer'
+NeoBundle 'jlanzarotta/bufexplorer'
 
 " Ruby Enhancements
-Plugin 'vim-ruby/vim-ruby'
+NeoBundle 'vim-ruby/vim-ruby'
 
 " Rails Enhancements
-Plugin 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rails'
 
 " Rake enhancements
-Plugin 'tpope/vim-rake'
+NeoBundle 'tpope/vim-rake'
 
 " Markdown Enhancements
-Plugin 'plasticboy/vim-markdown'
+NeoBundle 'plasticboy/vim-markdown'
 
 " Slim Template Engine syntax
-Plugin 'slim-template/vim-slim'
+NeoBundle 'slim-template/vim-slim'
 
 " Ctags generation
-Plugin 'szw/vim-tags'
+NeoBundle 'szw/vim-tags'
 
 " Go stuff
-Plugin 'fatih/vim-go'
+NeoBundle 'fatih/vim-go'
 
 " Until I find what's the issue with nvim
 if !has('nvim')
   " Track UltiSnips (the engine)
-  Plugin 'SirVer/ultisnips'
+  NeoBundle 'SirVer/ultisnips'
 endif
 
 " Snippets are separated from the engine
-Plugin 'honza/vim-snippets'
+NeoBundle 'honza/vim-snippets'
 
 " Finish requiring Vundle plugins
-call vundle#end()
+call neobundle#end()
 
-" Enable filetype detection and filetype-specific indenting & plugins. Required
-" right after vundle plugins
+" Enable filetype detection and filetype-specific indenting & plugins.
 filetype plugin indent on
+
+" Prompt to install missing bundles
+NeoBundleCheck
 
 " Enable syntax highlighting
 syntax on
