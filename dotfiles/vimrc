@@ -52,11 +52,8 @@ NeoBundle 'szw/vim-tags'
 " Go stuff
 NeoBundle 'fatih/vim-go'
 
-" Until I find what's the issue with nvim
-if !has('nvim')
-  " Track UltiSnips (the engine)
-  NeoBundle 'SirVer/ultisnips'
-endif
+" Track UltiSnips (the engine)
+NeoBundle 'SirVer/ultisnips'
 
 " Snippets are separated from the engine
 NeoBundle 'honza/vim-snippets'
