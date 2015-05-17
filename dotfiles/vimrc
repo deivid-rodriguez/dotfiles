@@ -22,9 +22,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Enabled plugins
 "===============================================================================
 
-" Preferred colorscheme
-NeoBundle 'w0ng/vim-hybrid'
-
 " Fuzzy file, buffer, mru, tag finder
 NeoBundle 'kien/ctrlp.vim'
 
@@ -134,11 +131,6 @@ map ,q :bd<CR>                    " close buffer
 map ,w :w<CR>
 map ,c :retab<CR> :%s/  *$//<CR>  " clean tabs and spaces at end of line
 map ,n j0f"lct"
-
-"-------------------------------------------------------------------------------
-" Colorscheme
-"-------------------------------------------------------------------------------
-colorscheme hybrid
 
 "-------------------------------------------------------------------------------
 " Set & Toogle paste mode
