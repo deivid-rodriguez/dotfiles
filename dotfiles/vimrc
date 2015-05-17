@@ -113,8 +113,6 @@ set mousemodel=popup
 "-------------------------------------------------------------------------------
 autocmd BufNewFile,BufRead *.ini silent! set syntax=cfg
 
-set synmaxcol=500 " No resaltar sintaxis en lineas largas (performance)
-
 "-------------------------------------------------------------------------------
 " no backup
 "-------------------------------------------------------------------------------
