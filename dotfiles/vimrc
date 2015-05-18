@@ -55,6 +55,9 @@ NeoBundle 'SirVer/ultisnips'
 " Snippets are separated from the engine
 NeoBundle 'honza/vim-snippets'
 
+" Seamless navigation between tmux panes and vim splits
+NeoBundle 'christoomey/vim-tmux-navigator'
+
 " Finish requiring Vundle plugins
 call neobundle#end()
 
