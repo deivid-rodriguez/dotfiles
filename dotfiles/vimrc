@@ -67,6 +67,9 @@ filetype plugin indent on
 " Prompt to install missing bundles
 NeoBundleCheck
 
+" Remove unused bundles
+NeoBundleClean
+
 " Enable syntax highlighting
 syntax on
 
