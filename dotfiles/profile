@@ -43,6 +43,10 @@ source $HOME/.linuxbrew/opt/chruby/share/chruby/chruby.sh
 chruby 2.2
 
 #
-# Custom completion
+# Custom completions
 #
-source "$HOME/.completion.d/bundler"
+#
+for f in $HOME/.completion.d/*
+do
+  source $f
+done
