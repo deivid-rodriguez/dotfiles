@@ -8,12 +8,9 @@ then
 fi
 
 function syncIt() {
-  dirs=`find dotfiles -maxdepth 1 -mindepth 1 -type d`
-
-  for d in $dirs
-  do
-    cp -r $d/. ~/.$(basename $d)
-  done
+  rsync -ah --delete dotfiles/profile.d/ ~/.profile.d
+  rsync -ah --delete dotfiles/completion.d/ ~/.completions.d
+  rsync -ah dotfiles/vim/ ~/.vim
 
   files=`find dotfiles -maxdepth 1 -mindepth 1 -type f`
   for f in $files
