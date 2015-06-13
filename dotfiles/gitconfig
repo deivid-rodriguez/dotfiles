@@ -15,6 +15,7 @@
 [core]
   excludesfile = /home/davidr/.gitignore
   editor = vim
+  autocrlf = input
 
 [content]
   editor = vim -w
