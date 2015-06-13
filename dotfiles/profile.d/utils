@@ -1,0 +1,20 @@
+#
+# Recursive search and replace method
+#
+# @param $2 Old string to be replaced
+# @param $2 New string to replace it
+#
+function search_and_replace {
+  find -type f -exec sed -i "s/$1/$2/g" {} \;
+}
+
+#
+# Downloads all mp3 files linked to by a web page.
+#
+# @param $2 Target url
+#
+# @example download_mp3 http://bohemianbetyars.hu/release/stone-soup/
+#
+function download_mp3 {
+  wget $2 -O - | grep -oh "http[^ ]*.mp3" | wget -i -
+}

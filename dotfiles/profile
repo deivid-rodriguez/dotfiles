@@ -33,14 +33,12 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 eval "$(hub alias -s)"
 
 #
-# Enable chruby
+# Custom configurations
 #
-source $HOME/.linuxbrew/opt/chruby/share/chruby/chruby.sh
-
-#
-# Select default Ruby
-#
-chruby 2.2
+for f in $HOME/.profile.d/*
+do
+  source $f
+done
 
 #
 # Custom completions
