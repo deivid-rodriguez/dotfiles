@@ -1,7 +1,7 @@
 #
 # Recursive search and replace method
 #
-# @param $2 Old string to be replaced
+# @param $1 Old string to be replaced
 # @param $2 New string to replace it
 #
 function search_and_replace {
