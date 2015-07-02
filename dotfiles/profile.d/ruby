@@ -1,7 +1,7 @@
 #
 # Enable chruby
 #
-source $HOME/.linuxbrew/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/chruby.sh
 
 #
 # Select default Ruby

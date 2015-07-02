@@ -21,13 +21,6 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 #
-# Environment variables needed for Linuxbrew
-#
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
-#
 # Alias hub to git
 #
 eval "$(hub alias -s)"
