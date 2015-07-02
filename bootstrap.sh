@@ -15,7 +15,7 @@ function syncIt() {
   files=`find dotfiles -maxdepth 1 -mindepth 1 -type f`
   for f in $files
   do
-    cp -r $f ~/.$(basename $f)
+    rsync -ah --delete $f ~/.$(basename $f)
   done
 
   links=`find dotfiles -maxdepth 1 -mindepth 1 -type l`
