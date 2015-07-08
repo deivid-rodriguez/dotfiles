@@ -6,4 +6,4 @@ source /usr/local/share/chruby/chruby.sh
 #
 # Select default Ruby
 #
-chruby 2.2
+source /usr/local/share/chruby/auto.sh
