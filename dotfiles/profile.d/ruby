@@ -7,3 +7,8 @@ source /usr/local/share/chruby/chruby.sh
 # Select default Ruby
 #
 source /usr/local/share/chruby/auto.sh
+
+#
+# JRUBY_OPTS to make jruby startup time acceptable
+#
+export JRUBY_OPTS=--dev
