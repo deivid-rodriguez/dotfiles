@@ -22,6 +22,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Enabled plugins
 "===============================================================================
 
+" Colorscheme
+NeoBundle 'https://github.com/freeo/vim-kalisi'
+
 " Fuzzy file, buffer, mru, tag finder
 NeoBundle 'kien/ctrlp.vim'
 
@@ -200,3 +203,8 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
 com! FormatJSON %!python -m json.tool
+
+"-------------------------------------------------------------------------------
+" Colorscheme
+"-------------------------------------------------------------------------------
+colorscheme kalisi
