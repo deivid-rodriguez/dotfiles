@@ -195,13 +195,8 @@ autocmd BufNewFile,BufRead ~/Proyectos/ruby/* set tabstop=8 nolist
 let g:vim_markdown_folding_disabled = 1
 
 "-------------------------------------------------------------------------------
-" GUI Options
+" Format json easily
 "-------------------------------------------------------------------------------
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-
 com! FormatJSON %!python -m json.tool
 
 "-------------------------------------------------------------------------------
