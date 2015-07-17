@@ -11,4 +11,4 @@ source /usr/local/share/chruby/auto.sh
 #
 # JRUBY_OPTS to make jruby startup time acceptable
 #
-export JRUBY_OPTS='--dev --debug'
+export JRUBY_OPTS="$JRUBY_OPTS --dev --debug"
