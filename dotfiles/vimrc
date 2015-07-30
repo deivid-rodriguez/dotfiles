@@ -66,6 +66,9 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 " Finish requiring Vundle plugins
 call neobundle#end()
 
+" Workaround for very slow startup on JRUBY + chruby
+let g:ruby_path = system('echo $RUBIES')
+
 " Enable filetype detection and filetype-specific indenting & plugins.
 filetype plugin indent on
 
