@@ -57,9 +57,6 @@ let g:loaded_python3_provider = 0
 NeoBundle 'SirVer/ultisnips'
 let g:loaded_python3_provider = 1
 
-" Snippets are separated from the engine
-NeoBundle 'honza/vim-snippets'
-
 " Seamless navigation between tmux panes and vim splits
 NeoBundle 'christoomey/vim-tmux-navigator'
 
