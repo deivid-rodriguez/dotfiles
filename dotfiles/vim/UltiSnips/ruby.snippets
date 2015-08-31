@@ -24,6 +24,23 @@ it '${1}' do
 end
 endsnippet
 
+snippet class "Defines a new class with a comment header" b
+#
+# $1
+#
+class $2
+	def initialize(${3:*args})
+		$4
+	end
+end
+endsnippet
+
+snippet defi "Adds a new initialize method" b
+def initialize${1:(${2:*args})}
+	$0
+end
+endsnippet
+
 snippet def "Adds a new method" b
 def $1
 	$2
