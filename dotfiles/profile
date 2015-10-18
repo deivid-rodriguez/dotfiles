@@ -30,7 +30,7 @@ eval "$(hub alias -s)"
 #
 for f in $HOME/.profile.d/*
 do
-  source $f
+  source "$f"
 done
 
 #
@@ -39,5 +39,5 @@ done
 #
 for f in $HOME/.completion.d/*
 do
-  source $f
+  source "$f"
 done

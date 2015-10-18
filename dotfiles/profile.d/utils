@@ -18,5 +18,5 @@ function search_and_replace {
 # @example download_mp3 http://bohemianbetyars.hu/release/stone-soup/
 #
 function download_mp3 {
-  wget $2 -O - | grep -oh "http[^ ]*.mp3" | wget -i -
+  wget "$2" -O - | grep -oh "http[^ ]*.mp3" | wget -i -
 }
