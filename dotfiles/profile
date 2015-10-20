@@ -36,7 +36,6 @@ done
 #
 # Custom completions
 #
-#
 for f in $HOME/.completion.d/*
 do
   source "$f"
