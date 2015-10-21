@@ -21,11 +21,6 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 #
-# Alias hub to git
-#
-eval "$(hub alias -s)"
-
-#
 # Custom configurations
 #
 for f in $HOME/.profile.d/*

@@ -1,0 +1,15 @@
+#
+# Installs hub
+#
+function install_hub() {
+  git clone https://github.com/github/hub.git
+  cd hub
+  ./script/build
+  sudo cp hub /usr/local/bin/
+}
+
+#
+# Alias hub to git
+#
+hash hub 2>/dev/null || install_hub
+eval "$(hub alias -s)"
