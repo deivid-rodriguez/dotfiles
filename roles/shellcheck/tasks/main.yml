@@ -1,0 +1,12 @@
+---
+
+- name: Install requirements
+  apt: name={{item}} state=latest
+  with_items:
+    - cabal-install
+    - ghc
+
+- name: Install shellcheck
+  shell: cabal update && cabal install shellcheck
+  args:
+    creates: ~/.cabal/bin/shellcheck
