@@ -1,0 +1,42 @@
+---
+
+- name: Setup neovim repo sources
+  apt_repository: \
+    repo='deb http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu wily main'
+    state=present
+
+- name: Setup neovim apt key
+  apt_key: keyserver=keyserver.ubuntu.com
+           id=9DBB0BE9366964F134855E2255F96FCF8231B6DD
+           state=present
+
+- name: Install neovim
+  apt: name=neovim update_cache=yes state=latest
+
+- name: Install python modules prerrequisites
+  apt: name={{item}} state=latest
+  with_items:
+    - python-dev
+    - python-pip
+    - python3-dev
+    - python3-pip
+
+- name: Install python module
+  pip: name=neovim state=latest
+
+- name: Setup neovim as the default editor
+  alternatives: name={{item}} path=/usr/bin/nvim
+  with_items:
+    - vi
+    - vim
+    - editor
+
+- name: Install clipboard support
+  apt: name=xsel state=latest
+
+- name: Install Neobundle (1/2)
+  file: path=~/.vim/bundle state=directory mode=0755
+
+- name: Install Neobundle (2/2)
+  git: repo=https://github.com/Shougo/neobundle.vim
+       dest=~/.vim/bundle/neobundle.vim

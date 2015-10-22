@@ -1,0 +1,13 @@
+---
+
+- name: Download ruby-install
+  git: repo=https://github.com/postmodern/ruby-install dest=/tmp/ruby-install
+
+- name: Install ruby-install
+  command: chdir=/tmp/ruby-install make install
+
+- name: Download chruby
+  git: repo=https://github.com/postmodern/chruby dest=/tmp/chruby
+
+- name: Install chruby
+  command: chdir=/tmp/chruby make install

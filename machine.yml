@@ -1,0 +1,8 @@
+---
+
+- hosts: localhost
+  sudo: yes
+  roles:
+  - git
+  - vi
+  - ruby

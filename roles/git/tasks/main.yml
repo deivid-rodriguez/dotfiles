@@ -1,0 +1,13 @@
+---
+
+- name: Install git
+  apt: name=git state=latest
+
+- name: Download hub
+  get_url: url={{hub_url}} dest=/tmp
+
+- name: Extract hub
+  unarchive: src=/tmp/{{hub_archive}} dest=/tmp
+
+- name: Install hub
+  command: creates=/usr/local/bin/hub cp /tmp/{{hub_folder}}/hub /usr/local/bin/
