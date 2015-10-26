@@ -10,7 +10,7 @@ fi
 function syncIt() {
   rsync -ah --delete dotfiles/profile.d/ ~/.profile.d
   rsync -ah --delete dotfiles/completion.d/ ~/.completion.d
-  rsync -ah dotfiles/vim/ ~/.vim
+  rsync -ah dotfiles/config/ ~/.config
 
   files=`find dotfiles -maxdepth 1 -mindepth 1 -type f`
   for f in $files
