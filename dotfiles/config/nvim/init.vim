@@ -53,9 +53,7 @@ NeoBundle 'szw/vim-tags'
 NeoBundle 'fatih/vim-go'
 
 " Track UltiSnips (the engine)
-let g:loaded_python3_provider = 0
 NeoBundle 'SirVer/ultisnips'
-let g:loaded_python3_provider = 1
 
 " Seamless navigation between tmux panes and vim splits
 NeoBundle 'christoomey/vim-tmux-navigator'
