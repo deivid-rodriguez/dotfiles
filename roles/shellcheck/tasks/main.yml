@@ -1,6 +1,7 @@
 ---
 
 - name: Install requirements
+  become: true
   apt: name={{item}} state=latest
   with_items:
     - cabal-install

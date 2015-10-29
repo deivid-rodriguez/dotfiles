@@ -6,4 +6,7 @@
   - git
   - vi
   - ruby
+
+- hosts: localhost
+  roles:
   - shellcheck
