@@ -3,7 +3,7 @@
 ## Setup development machine
 
 ```bash
-sudo ansible-playbook -i hosts machine.yml
+ansible-playbook -i hosts machine.yml --ask-become-pass
 ```
 
 
