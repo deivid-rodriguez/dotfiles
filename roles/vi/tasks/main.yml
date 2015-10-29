@@ -28,7 +28,6 @@
   alternatives: name={{item}} path=/usr/bin/nvim
   with_items:
     - vi
-    - vim
     - editor
 
 - name: Install clipboard support

@@ -14,11 +14,11 @@
 
 [core]
   excludesfile = /home/davidr/.gitignore
-  editor = vim
+  editor = nvim
   autocrlf = input
 
 [content]
-  editor = vim -w
+  editor = nvim -w
 
 [push]
   default = simple
