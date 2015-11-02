@@ -7,6 +7,10 @@
     - cabal-install
     - ghc
 
+- name: Install tmux
+  become: true
+  apt: name=tmux state=latest
+
 - name: Install shellcheck
   shell: cabal update && cabal install shellcheck
   args:
