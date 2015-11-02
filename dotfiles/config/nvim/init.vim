@@ -10,10 +10,10 @@
 filetype off
 
 " Set the runtime path to include Vundle and initialize
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 
 " Start requiring NeoBundle plugins
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin()
 
 " Let NeoBundle manage NeoBundle, required
 NeoBundleFetch 'Shougo/neobundle.vim'

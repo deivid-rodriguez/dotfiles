@@ -34,8 +34,8 @@
   apt: name=xsel state=latest
 
 - name: Install Neobundle (1/2)
-  file: path=~/.vim/bundle state=directory mode=0755
+  file: path=~/.config/nvim/bundle state=directory mode=0755
 
 - name: Install Neobundle (2/2)
   git: repo=https://github.com/Shougo/neobundle.vim
-       dest=~/.vim/bundle/neobundle.vim
+       dest=~/.config/nvim/bundle/neobundle.vim
