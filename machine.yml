@@ -9,4 +9,4 @@
 
 - hosts: localhost
   roles:
-  - shellcheck
+  - shell
