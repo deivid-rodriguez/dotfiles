@@ -11,6 +11,10 @@
 export EDITOR=nvim
 
 #
+# Set default terminal
+#
+export TERM=screen-256color
+
 #
 # Custom configurations
 #
