@@ -4,74 +4,57 @@
 " author: David Rodríguez de Dios
 "-------------------------------------------------------------------------------
 
-"===============================================================================
-" NeoBundle Manager configuration
-"===============================================================================
-filetype off
-
-" Set the runtime path to include Vundle and initialize
-set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
-
-" Start requiring NeoBundle plugins
-call neobundle#begin()
-
-" Let NeoBundle manage NeoBundle, required
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Start requiring plugins
+call plug#begin()
 
 "===============================================================================
 " Enabled plugins
 "===============================================================================
 
 " Colorscheme
-NeoBundle 'https://github.com/freeo/vim-kalisi'
+Plug 'freeo/vim-kalisi'
 
 " Fuzzy file, buffer, mru, tag finder
-NeoBundle 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " BufExplorer
-NeoBundle 'jlanzarotta/bufexplorer'
+Plug 'jlanzarotta/bufexplorer'
 
 " Ruby Enhancements
-NeoBundle 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby'
 
 " Rails Enhancements
-NeoBundle 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 
 " Rake enhancements
-NeoBundle 'tpope/vim-rake'
+Plug 'tpope/vim-rake'
 
 " Markdown Enhancements
-NeoBundle 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 
 " Slim Template Engine syntax
-NeoBundle 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim'
 
 " Ctags generation
-NeoBundle 'szw/vim-tags'
+Plug 'szw/vim-tags'
 
 " Go stuff
-NeoBundle 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 " Track UltiSnips (the engine)
-NeoBundle 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " Seamless navigation between tmux panes and vim splits
-NeoBundle 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Finish requiring Vundle plugins
-call neobundle#end()
+call plug#end()
 
 " Workaround for very slow startup on JRUBY + chruby
 let g:ruby_path = system('echo $RUBIES')
 
 " Enable filetype detection and filetype-specific indenting & plugins.
 filetype plugin indent on
-
-" Prompt to install missing bundles
-NeoBundleCheck
-
-" Remove unused bundles
-NeoBundleClean
 
 " Enable syntax highlighting
 syntax on
