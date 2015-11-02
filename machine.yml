@@ -4,9 +4,9 @@
   become: true
   roles:
   - git
-  - vi
   - ruby
 
 - hosts: localhost
   roles:
+  - vi
   - shell
