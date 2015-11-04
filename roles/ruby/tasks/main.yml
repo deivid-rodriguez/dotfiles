@@ -1,5 +1,17 @@
 ---
 
+- name: Ruby dependencies
+  apt: name={{item}} state=latest
+  with_items:
+    - build-essential
+    - zlib1g-dev
+    - libyaml-dev
+    - libssl-dev
+    - libgdbm-dev
+    - libreadline-dev
+    - libncurses5-dev
+    - libffi-dev
+
 - name: Check ruby-install installation
   stat: path=/usr/local/bin/ruby-install
   register: ruby_install
