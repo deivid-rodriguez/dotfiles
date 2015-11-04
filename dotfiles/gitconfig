@@ -13,7 +13,6 @@
   dump = cat-file -p
 
 [core]
-  excludesfile = /home/davidr/.gitignore
   editor = nvim
   autocrlf = input
 
