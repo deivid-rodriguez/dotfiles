@@ -6,3 +6,6 @@ tags
 
 # Ag
 .agignore
+
+# Tmuxinator
+.tmuxinator.yml
