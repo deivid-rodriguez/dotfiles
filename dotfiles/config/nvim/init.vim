@@ -89,7 +89,6 @@ set noautoindent          " indent from last line when starting new line
 set incsearch
 set noignorecase
 set wildmode=list:longest " bash-like completion
-set encoding=utf-8
 set exrc                  " enable per-directory .vimrc files
 set secure                " disable unsafe commands in local .vimrc files
 set mouse=a
