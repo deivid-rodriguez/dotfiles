@@ -51,6 +51,11 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 #
+# Set custom prompt
+#
+PS1='\[\033[5;49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+
+#
 # Some more ls aliases
 #
 alias ll='ls -alF'
