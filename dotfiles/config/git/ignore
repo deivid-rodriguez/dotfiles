@@ -1,6 +1,9 @@
 # C debugging history
 .gdb_history
 
+# Ruby debugging history
+.byebug_history
+
 # Vim
 tags
 
