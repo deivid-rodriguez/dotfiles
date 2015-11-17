@@ -56,13 +56,6 @@ fi
 PS1='\[\033[5;49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 
 #
-# Some more ls aliases
-#
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-#
 # Enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
