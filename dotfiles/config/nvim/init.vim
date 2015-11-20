@@ -36,6 +36,9 @@ Plug 'plasticboy/vim-markdown'
 " Slim Template Engine syntax
 Plug 'slim-template/vim-slim'
 
+" Coffee Script enhancements
+Plug 'kchmck/vim-coffee-script'
+
 " Ctags generation
 Plug 'szw/vim-tags'
 
