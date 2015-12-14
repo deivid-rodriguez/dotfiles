@@ -29,7 +29,7 @@ shopt -s checkwinsize
 
 #
 # Enable the "**" pattern used in a pathname expansion context to match all
-# files and zero or more directories and subdirectories.
+# files and zero or more directories and subdirectories. NOTE: Requires bash 4
 #
 shopt -s globstar
 
