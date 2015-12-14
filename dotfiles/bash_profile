@@ -48,7 +48,7 @@ fi
 #
 # Set custom prompt
 #
-PS1='\[\033[5;49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+PS1='\[\033[49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 
 #
 # Load the default bash startup file if it exists
