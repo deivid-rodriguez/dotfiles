@@ -1,4 +1,0 @@
-#
-# Setup ansible from source, that must be downloaded to ~/.ansible/src
-#
-source "$HOME/.ansible/src/hacking/env-setup" -q
