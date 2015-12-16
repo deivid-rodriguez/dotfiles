@@ -1,0 +1,4 @@
+#
+# Configure alias for vi
+#
+alias vi=nvim

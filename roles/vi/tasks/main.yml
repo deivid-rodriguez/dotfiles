@@ -28,13 +28,6 @@
 - name: Install python module
   pip: name=neovim state=latest extra_args='--user --upgrade'
 
-- name: Setup neovim as the default editor
-  become: true
-  alternatives: name={{item}} path=/usr/bin/nvim
-  with_items:
-    - vi
-    - editor
-
 - name: Install clipboard support
   become: true
   apt: name=xsel state=latest
