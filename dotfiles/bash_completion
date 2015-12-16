@@ -1,0 +1,7 @@
+#
+# Custom user completions
+#
+for f in $HOME/.completion.d/*
+do
+  source "$f"
+done

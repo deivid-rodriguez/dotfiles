@@ -49,6 +49,16 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 #
+# Load completions
+#
+if [ -s /usr/local/etc/bash_completion ]
+then
+  source /usr/local/etc/bash_completion
+else
+  source ~/.bash_completion
+fi
+
+#
 # Set custom prompt
 #
 PS1='\[\033[49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
