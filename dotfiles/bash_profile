@@ -1,4 +1,7 @@
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+#
+# Load the default .profile
+#
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 #
 # If not running interactively, don't do anything
