@@ -7,7 +7,7 @@
 function search_and_replace {
   [ $# -eq 0 ] && { echo "search_and_replace <old> <new>"; return; }
 
-  find -type f -name '*.rb' -exec sed -i "s/$1/$2/g" {} \;
+  find . -type f -path '*.rb' -exec sed -i '' "s/$1/$2/g" {} \;
 }
 
 #
