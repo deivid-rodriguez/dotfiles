@@ -8,5 +8,5 @@
 
 - hosts: localhost
   roles:
-  - vi
+  - vim
   - shell

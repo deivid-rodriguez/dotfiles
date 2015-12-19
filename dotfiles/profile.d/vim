@@ -1,0 +1,4 @@
+#
+# Configure alias for vim
+#
+alias vim=nvim
