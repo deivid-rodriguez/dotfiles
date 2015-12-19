@@ -144,13 +144,6 @@ autocmd FileType make set noexpandtab
 autocmd FileType make set nolist
 
 "-------------------------------------------------------------------------------
-" make YCM compatible with UltiSnips (using supertab)
-"-------------------------------------------------------------------------------
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-"-------------------------------------------------------------------------------
 " Configure Ctrl-P
 "-------------------------------------------------------------------------------
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " MacOSX/Linux
