@@ -48,6 +48,9 @@ Plug 'SirVer/ultisnips'
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
 
+" Fast tests in vim
+Plug 'janko-m/vim-test'
+
 " Finish requiring Vundle plugins
 call plug#end()
 
@@ -113,6 +116,15 @@ set noswapfile
 map ,e :BufExplorer<CR>
 map ,s :BufExplorerHorizontalSplit<CR>
 map ,v :BufExplorerVerticalSplit<CR>
+
+"
+" vim-test mappings
+"
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 "-------------------------------------------------------------------------------
 " misc maps
