@@ -22,6 +22,7 @@ Plug 'jlanzarotta/bufexplorer'
 
 " Ruby Enhancements
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-endwise'
 
 " Rails Enhancements
 Plug 'tpope/vim-rails'
