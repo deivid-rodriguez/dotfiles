@@ -6,14 +6,14 @@ def read_local_dotfile(filename)
 end
 
 # Template engine
-gem "haml-rails"
+gem "slim-rails"
 
 # Test framework
 gem "rspec-rails"
 
 # Linters
 gem "rubocop"
-gem "haml-lint"
+gem "slim_lint"
 gem "scss-lint"
 gem "overcommit"
 
