@@ -12,7 +12,7 @@ gem "slim-rails"
 gem "rspec-rails"
 
 # Linters
-gem "rubocop"
+gem "rubocop", github: "bbatsov/rubocop"
 gem "slim_lint"
 gem "scss-lint"
 gem "overcommit"
