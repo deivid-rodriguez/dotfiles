@@ -9,10 +9,10 @@ gem "rubocop"
 gem "haml-lint"
 gem "scss-lint"
 
-# Rspec initial setup
-generate("rspec:install")
-
 after_bundle do
+  # Rspec initial setup
+  generate("rspec:install")
+
   git :init
   git add: "."
 end
