@@ -31,6 +31,7 @@ after_bundle do
   run "overcommit --install"
   run "overcommit --sign"
 
+  # Initial commit
   git :init
-  git add: "."
+  git add: ".", commit: "-m 'Initial skeleton'"
 end
