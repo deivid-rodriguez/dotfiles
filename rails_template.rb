@@ -24,6 +24,13 @@ after_bundle do
   # Configure RuboCop
   file ".rubocop.yml", read_local_dotfile(".rubocop.yml")
 
+  # Correct what we can correct
+  run "bundle exec rubocop -a"
+
+  # Allow the rest
+  run "bundle exec rubocop --auto-gen-config"
+  prepend_to_file ".rubocop.yml", "inherit_from: .rubocop_todo.yml\n"
+
   # Configure overcommit
   file ".overcommit.yml", read_local_dotfile(".overcommit.yml")
 
