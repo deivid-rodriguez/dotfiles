@@ -9,10 +9,6 @@ gem "rubocop"
 gem "haml-lint"
 gem "scss-lint"
 
-# Haml application layout
-generate("haml:application_layout", "convert")
-run("rm app/views/layouts/application.html.erb")
-
 # Rspec initial setup
 generate("rspec:install")
 
