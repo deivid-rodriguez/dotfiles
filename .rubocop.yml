@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/*.rb'
+  DisplayCopNames: true
+
+  DisplayStyleGuide: true
+
+Rails:
+  Enabled: true
+
+Style/ExtraSpacing:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
