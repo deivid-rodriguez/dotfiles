@@ -16,6 +16,12 @@ export EDITOR=nvim
 export TERM=xterm-256color
 
 #
+# Smart pager
+#
+export PAGER="less"
+export LESS="--no-init --quit-if-one-screen --raw-control-chars"
+
+#
 # Custom configurations
 #
 for f in $HOME/.profile.d/*
