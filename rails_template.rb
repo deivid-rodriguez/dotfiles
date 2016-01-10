@@ -17,6 +17,22 @@ gem "slim_lint"
 gem "scss-lint"
 gem "overcommit"
 
+environment <<-RUBY
+  #
+  # Configure lighter generators
+  #
+  config.generators do |g|
+    g.test_framework :rspec, view_specs: false,
+                             helper_specs: false,
+                             routing_specs: false,
+                             request_specs: false,
+                             controller_specs: false
+    g.javascripts false
+    g.jbuilder false
+    g.helper false
+  end
+RUBY
+
 after_bundle do
   # Rspec initial setup
   generate("rspec:install")
