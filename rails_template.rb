@@ -34,11 +34,13 @@ after_bundle do
   # Configure overcommit
   file ".overcommit.yml", read_local_dotfile(".overcommit.yml")
 
+  # Initialize source control
+  git :init
+
   # Install & sign git hooks
   run "overcommit --install"
   run "overcommit --sign"
 
   # Initial commit
-  git :init
   git add: ".", commit: "-m 'Initial skeleton'"
 end
