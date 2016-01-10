@@ -9,13 +9,17 @@ end
 gem "slim-rails"
 
 # Test framework
-gem "rspec-rails"
+gem_group :development, :test do
+  gem "rspec-rails"
+end
 
 # Linters
-gem "rubocop", github: "bbatsov/rubocop"
-gem "slim_lint"
-gem "scss-lint"
-gem "overcommit"
+gem_group :lint do
+  gem "rubocop", github: "bbatsov/rubocop"
+  gem "slim_lint"
+  gem "scss-lint"
+  gem "overcommit"
+end
 
 environment <<-RUBY
   #
