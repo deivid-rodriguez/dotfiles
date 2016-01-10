@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")"
+cd "$(dirname "${BASH_SOURCE}")" || exit
 
 if [ "$1" != 'local' ]
 then
@@ -12,15 +12,15 @@ function syncIt() {
   rsync -ah --delete dotfiles/completion.d/ ~/.completion.d
   rsync -ah dotfiles/config/ ~/.config
 
-  files=`find dotfiles -maxdepth 1 -mindepth 1 -type f`
+  files=$(find dotfiles -maxdepth 1 -mindepth 1 -type f)
   for f in $files
   do
-    rsync -ah --delete $f ~/.$(basename $f)
+    rsync -ah --delete "$f" "$HOME/.$(basename "$f")"
   done
 }
 
 function sourceIt() {
-  source ~/.bash_profile
+  source "$HOME/.bash_profile"
 }
 
 syncIt

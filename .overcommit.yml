@@ -35,6 +35,17 @@ PreCommit:
   ScssLint:
     enabled: true
 
+  ShellCheck:
+    enabled: true
+    flags: ['--format=gcc', '-x']
+    include:
+      - bootstrap.sh
+      - dotfiles/bashrc
+      - dotfiles/bash_profile
+      - dotfiles/completion.d/*
+      - dotfiles/profile
+      - dotfiles/profile.d/*
+
   HamlLint:
     enabled: true
 
