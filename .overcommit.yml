@@ -46,7 +46,7 @@ PreCommit:
       - dotfiles/profile
       - dotfiles/profile.d/*
 
-  HamlLint:
+  SlimLint:
     enabled: true
 
   TrailingWhitespace:
