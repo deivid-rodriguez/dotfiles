@@ -24,3 +24,6 @@
 
 [hub]
   protocol = ssh
+
+[fetch]
+  prune = true
