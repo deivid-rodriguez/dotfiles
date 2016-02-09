@@ -1,4 +1,8 @@
 AllCops:
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*.rb
+
   DisplayCopNames: true
 
   DisplayStyleGuide: true
@@ -10,6 +14,10 @@ Rails:
 
 Style/ModuleFunction:
   Enabled: false
+
+Style/FileName:
+  Exclude:
+    - bin/*
 
 Style/Lambda:
   Enabled: false
