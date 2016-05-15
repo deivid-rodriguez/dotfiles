@@ -14,6 +14,9 @@ call plug#begin()
 " Colorscheme
 Plug 'freeo/vim-kalisi'
 
+" Syntax checker
+Plug 'scrooloose/syntastic'
+
 " Fuzzy file, buffer, mru, tag finder
 Plug 'kien/ctrlp.vim'
 
@@ -105,6 +108,16 @@ set mousemodel=popup
 " Syntax
 "-------------------------------------------------------------------------------
 autocmd BufNewFile,BufRead *.ini silent! set syntax=cfg
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_ruby_checkers = ['rubocop']
+
+let s:headers = system('find ~/.rubies/*/include/* -type d -maxdepth 1')
+au FileType c let g:syntastic_c_include_dirs = split(s:headers, '\n')
 
 "-------------------------------------------------------------------------------
 " no backup
