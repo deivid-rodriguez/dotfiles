@@ -6,7 +6,7 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     ffi (1.9.10)
     iniparse (1.4.2)
-    overcommit (0.31.0)
+    overcommit (0.33.0)
       childprocess (~> 0.5.8)
       iniparse (~> 1.4)
     parser (2.3.1.0)
@@ -26,7 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  overcommit (= 0.31.0)
+  overcommit (= 0.33.0)
   rubocop (= 0.40.0)
 
 BUNDLED WITH
