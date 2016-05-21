@@ -29,6 +29,7 @@ source "$custom_folder/utils"
 #
 # Language customizations
 #
+source "$custom_folder/bash"
 source "$custom_folder/cabal"
 source "$custom_folder/git"
 source "$custom_folder/go"

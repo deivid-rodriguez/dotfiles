@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#
+# To prevent syntastic messages.
+#
+# Ignore globally until excluding per project via rc file is allowed
+# (koalaman/shellcheck#220)
+#
+export SHELLCHECK_OPTS='-e SC1090'
