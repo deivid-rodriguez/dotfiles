@@ -1,5 +1,5 @@
 #!/bin/bash
 
-export PATH="$PATH:/usr/local/texlive/2015/bin/x86_64-linux"
-export MANPATH="$PATH:/usr/local/texlive/2015/texmf-dist/doc/man"
-export INFOPATH="$INFOPATH:/usr/local/texlive/2015/texmf-dist/doc/info"
+pathadd "/usr/local/texlive/2015/bin/x86_64-linux"
+manpathadd "/usr/local/texlive/2015/texmf-dist/doc/man"
+infopathadd "/usr/local/texlive/2015/texmf-dist/doc/info"
