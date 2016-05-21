@@ -19,10 +19,20 @@ export TERM=xterm-256color
 export PAGER="less"
 export LESS="--no-init --quit-if-one-screen --raw-control-chars"
 
+custom_folder="$HOME/.profile.d"
+
 #
-# Custom configurations
+# General utilities
 #
-for f in $HOME/.profile.d/*
-do
-  source "$f"
-done
+source "$custom_folder/utils"
+
+#
+# Language customizations
+#
+source "$custom_folder/cabal"
+source "$custom_folder/git"
+source "$custom_folder/go"
+source "$custom_folder/latex"
+source "$custom_folder/python"
+source "$custom_folder/ruby"
+source "$custom_folder/vim"
