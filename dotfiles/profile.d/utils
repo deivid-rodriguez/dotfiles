@@ -24,6 +24,16 @@ function download_mp3 {
 }
 
 #
+# Converts a video file to a gif using `imagemagick` + `ffmpeg`. Produces an
+# output file named `out.gif` in the current directory.
+#
+# @param $1 Target video
+#
+function video2gif {
+  convert -set delay 10 -layers Optimize "$1" out.gif
+}
+
+#
 # Adds to PATH without duplicates and non folders
 #
 function pathadd {
