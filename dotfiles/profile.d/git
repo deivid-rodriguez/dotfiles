@@ -4,3 +4,14 @@
 # Alias hub to git
 #
 eval "$(hub alias -s)"
+
+#
+# Review every commit on a branch, oldest to newest
+#
+function pr_review {
+  revisions=$(git log master..HEAD --pretty=format:%h ; echo)
+  revisions=$(echo "$revisions" | tac)
+  revisions=($revisions)
+
+  git show "${revisions[@]}"
+}
