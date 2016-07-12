@@ -15,3 +15,13 @@ function pr_review {
 
   git show "${revisions[@]}"
 }
+
+#
+# Edit all files with merge conflicts
+#
+function edit_conflicts {
+  files=$(git diff --name-only --diff-filter=U)
+  files=($files)
+
+  nvim "${files[@]}"
+}
