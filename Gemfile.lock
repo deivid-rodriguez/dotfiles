@@ -29,5 +29,8 @@ DEPENDENCIES
   overcommit (= 0.34.2)
   rubocop (= 0.41.2)
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.12.5
+   1.13.1
