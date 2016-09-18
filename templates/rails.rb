@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 #
 # Reads config file from this repo
 #
