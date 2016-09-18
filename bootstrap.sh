@@ -2,11 +2,6 @@
 
 cd "$(dirname "${BASH_SOURCE}")" || exit
 
-if [ "$1" != 'local' ]
-then
-  git pull origin master
-fi
-
 function syncIt() {
   rsync -ah --delete dotfiles/profile.d/ ~/.profile.d
   rsync -ah --delete dotfiles/completion.d/ ~/.completion.d
