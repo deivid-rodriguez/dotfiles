@@ -182,7 +182,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 " Configure UltiSnips
 "-------------------------------------------------------------------------------
 let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsListSnippets='<c-tab>'
+let g:UltiSnipsListSnippets='<c-l>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<S-tab>'
 
