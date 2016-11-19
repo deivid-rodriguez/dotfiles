@@ -6,4 +6,4 @@
 # Ignore globally until excluding per project via rc file is allowed
 # (koalaman/shellcheck#220)
 #
-export SHELLCHECK_OPTS='-e SC1090'
+export SHELLCHECK_OPTS='-x -e SC1090'
