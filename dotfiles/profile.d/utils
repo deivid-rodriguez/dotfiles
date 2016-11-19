@@ -56,7 +56,7 @@ function infopathadd {
 
 #
 # Adds a folder to an environment variable made of a list of folders separated
-# by dots
+# by colons
 #
 function add_folder_to_env {
   if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
