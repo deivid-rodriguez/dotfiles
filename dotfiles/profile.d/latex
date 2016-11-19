@@ -1,5 +1,4 @@
 #!/bin/bash
 
 pathadd "/usr/local/texlive/2015/bin/x86_64-linux"
-manpathadd "/usr/local/texlive/2015/texmf-dist/doc/man"
 infopathadd "/usr/local/texlive/2015/texmf-dist/doc/info"

@@ -41,13 +41,6 @@ function pathadd {
 }
 
 #
-# Adds to MANPATH without duplicates and non folders
-#
-function manpathadd {
-  add_folder_to_env "$1" "MANPATH"
-}
-
-#
 # Adds to INFOPATH without duplicates and non folders
 #
 function infopathadd {
