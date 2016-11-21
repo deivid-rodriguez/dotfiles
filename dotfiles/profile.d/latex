@@ -1,4 +1,5 @@
 #!/bin/bash
 
 path_append "/usr/local/texlive/2016/bin/x86_64-linux"
+manpath_append "/usr/local/texlive/2016/texmf-dist/doc/man"
 infopath_append "/usr/local/texlive/2016/texmf-dist/doc/info"

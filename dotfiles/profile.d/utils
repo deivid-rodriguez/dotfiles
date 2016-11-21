@@ -43,6 +43,15 @@ function path_append {
 #
 # Appends to MANPATH without duplicates and non folders
 #
+function manpath_append {
+  append_folder_to_env "$1" "MANPATH"
+
+  manpath_keep_configuration_file_list
+}
+
+#
+# Appends to INFOPATH without duplicates and non folders
+#
 function infopath_append {
   append_folder_to_env "$1" "INFOPATH"
 }
@@ -55,5 +64,12 @@ function append_folder_to_env {
   if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
   then
     export "$2=${!2:+"${!2}:"}$1"
+  fi
+}
+
+function manpath_keep_configuration_file_list {
+  if [[ ! $MANPATH =~ :.* ]]
+  then
+    export MANPATH=":$MANPATH"
   fi
 }
