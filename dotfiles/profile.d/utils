@@ -11,3 +11,11 @@ function search_and_replace {
 
   git grep -Il '' | xargs perl -pi -e "s/$1/$2/g"
 }
+
+#
+# Generates a Rails like migration timestamp. Useful for rebasing when there
+# are outdated migrations.
+#
+function rails_migration_timestamp {
+  date +%Y%m%d%H%M%S
+}
