@@ -18,7 +18,7 @@
     - python3-pip
 
 - name: Install python module
-  pip: name=neovim state=latest extra_args='--user --upgrade'
+  pip: name=neovim state=latest extra_args='--user'
 
 - name: Install clipboard support
   become: true
