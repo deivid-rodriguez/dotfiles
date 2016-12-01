@@ -30,7 +30,7 @@ DEPENDENCIES
   rubocop (= 0.46.0)
 
 RUBY VERSION
-   ruby 2.3.2p217
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.13.6
