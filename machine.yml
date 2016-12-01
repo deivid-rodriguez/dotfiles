@@ -3,6 +3,7 @@
 - hosts: localhost
   become: true
   roles:
+  - docker
   - git
   - ruby
   - system
