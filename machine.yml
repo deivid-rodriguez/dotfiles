@@ -5,6 +5,7 @@
   roles:
   - git
   - ruby
+  - system
 
 - hosts: localhost
   roles:
