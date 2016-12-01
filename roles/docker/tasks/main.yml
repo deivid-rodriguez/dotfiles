@@ -28,3 +28,6 @@
 
 - name: Configure for non-root usage (requires manual re-login)
   user: name={{lookup('env', 'USER')}} groups=docker append=yes
+
+- name: Download docker-compose
+  get_url: url={{compose_url}} dest=/usr/local/bin/docker-compose mode=0755
