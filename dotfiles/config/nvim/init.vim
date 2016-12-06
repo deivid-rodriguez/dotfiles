@@ -45,9 +45,6 @@ Plug 'kchmck/vim-coffee-script'
 " Ctags generation
 Plug 'szw/vim-tags'
 
-" Go stuff
-Plug 'fatih/vim-go'
-
 " Track UltiSnips (the engine)
 Plug 'SirVer/ultisnips'
 
