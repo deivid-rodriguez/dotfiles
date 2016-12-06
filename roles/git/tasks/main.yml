@@ -16,5 +16,5 @@
   when: hub.stat.exists == false
 
 - name: Install hub
-  command: creates=/usr/local/bin/hub cp /tmp/{{hub_folder}}/hub /usr/local/bin/
+  command: creates=/usr/local/bin/hub /tmp/{{hub_folder}}/install
   when: hub.stat.exists == false
