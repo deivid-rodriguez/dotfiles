@@ -1,6 +1,6 @@
 ---
 
-hub_version: 2.2.1
+hub_version: 2.2.9
 hub_repo: https://github.com/github/hub
 hub_folder: hub-linux-amd64-{{hub_version}}
 hub_archive: "{{hub_folder}}.tar.gz"
