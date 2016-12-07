@@ -8,6 +8,9 @@
   type = cat-file -t
   dump = cat-file -p
 
+[commit]
+  cleanup = scissors
+
 [content]
   editor = nvim -w
 
