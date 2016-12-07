@@ -1,7 +1,3 @@
-[user]
-  email = deivid.rodriguez@gmail.com
-  name = David Rodríguez
-
 [alias]
   co = checkout
   ci = commit
@@ -12,20 +8,24 @@
   type = cat-file -t
   dump = cat-file -p
 
+[content]
+  editor = nvim -w
+
 [core]
   editor = nvim
   autocrlf = input
   quotepath = off
   pager = less -R
 
-[content]
-  editor = nvim -w
-
-[push]
-  default = simple
+[fetch]
+  prune = true
 
 [hub]
   protocol = ssh
 
-[fetch]
-  prune = true
+[push]
+  default = simple
+
+[user]
+  email = deivid.rodriguez@gmail.com
+  name = David Rodríguez
