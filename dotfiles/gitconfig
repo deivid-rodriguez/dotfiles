@@ -16,6 +16,7 @@
   editor = nvim
   autocrlf = input
   quotepath = off
+  pager = less -R
 
 [content]
   editor = nvim -w
