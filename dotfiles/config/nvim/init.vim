@@ -92,7 +92,7 @@ set nonumber
 set showmode
 set ruler                 " show column numbers
 set nostartofline         " keep column when scrolling with <C-f>, <C-b>
-set noautoindent          " indent from last line when starting new line
+set autoindent            " indent from last line when starting new line
 set incsearch
 set noignorecase
 set wildmode=list:longest " bash-like completion
