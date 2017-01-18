@@ -29,6 +29,11 @@ source "$custom_folder/paths"
 source "$custom_folder/media"
 
 #
+# Folder for local bins
+#
+path_append "$HOME/.local/bin"
+
+#
 # Language customizations
 #
 source "$custom_folder/bash"
