@@ -77,7 +77,7 @@ let g:mapleader = ','
 set history=700
 set mousehide
 set nowrap
-set textwidth=79
+set textwidth=80
 set tabstop=2             " tab size
 set backspace=2           " make backspace work
 set list                  " show hidden chars
