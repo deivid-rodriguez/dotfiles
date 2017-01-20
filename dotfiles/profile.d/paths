@@ -24,6 +24,36 @@ function infopath_append {
 }
 
 #
+# Prepends to PATH without duplicates and non folders
+#
+function path_prepend {
+  prepend_folder_to_env "$1" "PATH"
+}
+
+#
+# Prepends to MANPATH without duplicates and non folders
+#
+function manpath_prepend {
+  prepend_folder_to_env "$1" "MANPATH"
+
+  manpath_keep_configuration_file_list
+}
+
+#
+# Prepends to INFOPATH without duplicates and non folders
+#
+function infopath_prepend {
+  prepend_folder_to_env "$1" "INFOPATH"
+}
+
+#
+# Prepends to XDG_DATA_DIRS without duplicates and non folders
+#
+function xdg_data_dirs_prepend {
+  prepend_folder_to_env "$1" "XDG_DATA_DIRS"
+}
+
+#
 # Appends a folder to an environment variable made of a list of folders
 # separated by colons
 #
@@ -31,6 +61,17 @@ function append_folder_to_env {
   if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
   then
     export "$2=${!2:+"${!2}:"}$1"
+  fi
+}
+
+#
+# Prepends a folder to an environment variable made of a list of folders
+# separated by colons
+#
+function prepend_folder_to_env {
+  if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
+  then
+    export "$2=$1${!2:+":${!2}"}"
   fi
 }
 
