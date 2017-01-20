@@ -101,9 +101,9 @@ set secure                " disable unsafe commands in local .vimrc files
 set mouse=a
 set mousemodel=popup
 
-"-------------------------------------------------------------------------------
+"
 " Syntax
-"-------------------------------------------------------------------------------
+"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -115,22 +115,22 @@ let g:syntastic_javascript_checkers = ['eslint']
 let s:headers = system('find ~/.rubies/*/include/* -type d -maxdepth 1')
 au FileType c let g:syntastic_c_include_dirs = split(s:headers, '\n')
 
-"-------------------------------------------------------------------------------
-" no backup
-"-------------------------------------------------------------------------------
+"
+" Swap files
+"
 set nobackup
 set nowb
 set noswapfile
 
-"-------------------------------------------------------------------------------
+"
 " bufexplorer
-"-------------------------------------------------------------------------------
+"
 map ,e :BufExplorer<CR>
 map ,s :BufExplorerHorizontalSplit<CR>
 map ,v :BufExplorerVerticalSplit<CR>
 
 "
-" vim-test configuration
+" vim-test
 "
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
@@ -140,23 +140,23 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 let g:test#preserve_screen = 1
 
-"-------------------------------------------------------------------------------
-" misc maps
-"-------------------------------------------------------------------------------
+"
+" Misc maps
+"
 map ,r :e %<CR>                   " reload file.
 map ,q :bd<CR>                    " close buffer
 map ,w :w<CR>
 map ,c :retab<CR> :%s/  *$//<CR>  " clean tabs and spaces at end of line
 map ,n j0f"lct"
 
-"-------------------------------------------------------------------------------
-" Set & Toogle paste mode
-"-------------------------------------------------------------------------------
+"
+" Paste mode
+"
 set pastetoggle=<F9>
 
-"-------------------------------------------------------------------------------
-" Turn on filetype autocompletion
-"-------------------------------------------------------------------------------
+"
+" Filetype autocompletion
+"
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -170,41 +170,41 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType make set noexpandtab
 autocmd FileType make set nolist
 
-"-------------------------------------------------------------------------------
-" Configure Ctrl-P
-"-------------------------------------------------------------------------------
+"
+" Ctrl-P
+"
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip " MacOSX/Linux
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-"-------------------------------------------------------------------------------
-" Configure UltiSnips
-"-------------------------------------------------------------------------------
+"
+" UltiSnips
+"
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsListSnippets='<c-l>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<S-tab>'
 
-"-------------------------------------------------------------------------------
+"
 " Settings for specific dirs
-"-------------------------------------------------------------------------------
+"
 autocmd BufNewFile,BufRead ~/Proyectos/ruby/* set tabstop=8 nolist
 
-"-------------------------------------------------------------------------------
-" Markdown settings
-"-------------------------------------------------------------------------------
+"
+" Markdown
+"
 let g:vim_markdown_folding_disabled = 1
 
-"-------------------------------------------------------------------------------
-" Format json easily
-"-------------------------------------------------------------------------------
+"
+" Json
+"
 com! FormatJSON %!python -m json.tool
 
-"-------------------------------------------------------------------------------
+"
 " Colorscheme
-"-------------------------------------------------------------------------------
+"
 colorscheme kalisi
 
-"-------------------------------------------------------------------------------
+"
 " Grepping tool
-"-------------------------------------------------------------------------------
+"
 set grepprg=ag
