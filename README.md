@@ -2,6 +2,8 @@
 
 ## Setup development machine
 
+Install [ansible] >= 2.3 and run
+
 ```bash
 ansible-playbook -i hosts machine.yml --ask-become-pass
 ```
@@ -12,3 +14,5 @@ ansible-playbook -i hosts machine.yml --ask-become-pass
 ```
 source bootstrap.sh local
 ```
+
+[ansible]: https://docs.ansible.com/ansible/index.html

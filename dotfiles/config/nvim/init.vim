@@ -45,9 +45,6 @@ Plug 'kchmck/vim-coffee-script'
 " Ctags generation
 Plug 'szw/vim-tags'
 
-" Go stuff
-Plug 'fatih/vim-go'
-
 " Track UltiSnips (the engine)
 Plug 'SirVer/ultisnips'
 
@@ -80,7 +77,7 @@ let g:mapleader = ','
 set history=700
 set mousehide
 set nowrap
-set textwidth=79
+set textwidth=80
 set tabstop=2             " tab size
 set backspace=2           " make backspace work
 set list                  " show hidden chars
@@ -95,7 +92,7 @@ set nonumber
 set showmode
 set ruler                 " show column numbers
 set nostartofline         " keep column when scrolling with <C-f>, <C-b>
-set noautoindent          " indent from last line when starting new line
+set autoindent            " indent from last line when starting new line
 set incsearch
 set noignorecase
 set wildmode=list:longest " bash-like completion
@@ -113,6 +110,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
 
 let s:headers = system('find ~/.rubies/*/include/* -type d -maxdepth 1')
 au FileType c let g:syntastic_c_include_dirs = split(s:headers, '\n')

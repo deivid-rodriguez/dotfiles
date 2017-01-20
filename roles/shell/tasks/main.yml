@@ -15,3 +15,7 @@
   shell: cabal update && cabal install shellcheck
   args:
     creates: ~/.cabal/bin/shellcheck
+
+- name: Install ag
+  become: true
+  apt: name=silversearcher-ag state=present

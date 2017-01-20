@@ -13,4 +13,4 @@ fi
 #
 # Default options for ag
 #
-alias ag='ag --color-line-number "1;34"'
+alias ag='ag --color-line-number "1;34" --hidden'

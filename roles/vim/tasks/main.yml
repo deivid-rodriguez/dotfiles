@@ -2,15 +2,7 @@
 
 - name: Setup neovim repo sources
   become: true
-  apt_repository: \
-    repo='deb http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu wily main'
-    state=present
-
-- name: Setup neovim apt key
-  become: true
-  apt_key: keyserver=keyserver.ubuntu.com
-           id=9DBB0BE9366964F134855E2255F96FCF8231B6DD
-           state=present
+  apt_repository: repo='ppa:neovim-ppa/unstable' codename=xenial state=present
 
 - name: Install neovim
   become: true
@@ -26,7 +18,7 @@
     - python3-pip
 
 - name: Install python module
-  pip: name=neovim state=latest extra_args='--user --upgrade'
+  pip: name=neovim state=latest extra_args='--user'
 
 - name: Install clipboard support
   become: true

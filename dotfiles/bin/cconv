@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+#
+# Prints usage information
+#
+function usage() {
+  cat <<USAGE
+
+  cconv[ -f <currency>][ -t <currency> ][ -d <date>] <amount>
+
+    -f Source currency in 3-letter format (USD by default)
+    -t Target currency in 3-letter format (EUR by default)
+    -d Date in yyyy-mm-dd format (today by default)
+    -h Show this help
+
+USAGE
+}
+
+while getopts ":f:t:d:" o; do
+  case "${o}" in
+    f)
+      f=${OPTARG}
+      ;;
+    t)
+      t=${OPTARG}
+      ;;
+    d)
+      d=${OPTARG}
+      ;;
+    h)
+      usage
+      exit
+      ;;
+  esac
+done
+
+shift $((OPTIND-1))
+
+if [[ $# -eq 0 ]]
+then
+  echo "cconv: amount required" >&2
+  usage
+  exit 1
+fi
+
+if [[ $# -gt 1 ]]
+then
+  echo "cconv: amount required" >&2
+  usage
+  exit 1
+fi
+
+if [[ -v f ]]
+then
+  from=$f
+else
+  from="USD"
+fi
+
+if [[ -v t ]]
+then
+  to=$t
+else
+  to="EUR"
+fi
+
+if [[ -v d ]]
+then
+  date=$d
+else
+  date=$(date +%Y-%m-%d)
+fi
+
+rate=$(wget -qO- "http://currencies.apps.grandtrunk.net/getrate/$date/$from/$to")
+amount=$1
+
+echo "scale=2; $rate * $amount" | bc

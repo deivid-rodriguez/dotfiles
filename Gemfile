@@ -2,5 +2,7 @@
 
 source "https://rubygems.org"
 
+ruby RUBY_VERSION
+
 gem "overcommit", "0.37.0"
-gem "rubocop", "0.45.0"
+gem "rubocop", "0.46.0"

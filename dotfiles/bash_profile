@@ -61,8 +61,3 @@ fi
 # Set custom prompt
 #
 PS1='\[\033[49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
-
-#
-# Load the default bash startup file if it exists
-#
-[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"

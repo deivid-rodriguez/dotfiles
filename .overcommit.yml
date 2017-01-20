@@ -27,7 +27,7 @@ PreCommit:
   ExecutePermissions:
     enabled: true
     exclude:
-      - bin/*
+      - dotfiles/bin/*
 
   RuboCop:
     enabled: true

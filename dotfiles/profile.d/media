@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#
+# Downloads all mp3 files linked to by a web page.
+#
+# @param $2 Target url
+#
+# @example download_mp3 http://bohemianbetyars.hu/release/stone-soup/
+#
+function download_mp3 {
+  wget "$2" -O - | grep -oh "http[^ ]*.mp3" | wget -i -
+}
+
+#
+# Converts a video file to a gif using `imagemagick` + `ffmpeg`.
+#
+# @param $1 Source video
+# @param $2 Target gif
+#
+function video2gif {
+  convert -set delay 10 -layers Optimize "$1" "$2"
+}
