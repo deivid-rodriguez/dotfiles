@@ -54,6 +54,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " Fast tests in vim
 Plug 'janko-m/vim-test'
 
+" Handlebars
+Plug 'mustache/vim-mustache-handlebars'
+
 " Finish requiring Vundle plugins
 call plug#end()
 
@@ -198,6 +201,11 @@ let g:vim_markdown_folding_disabled = 1
 " Json
 "
 com! FormatJSON %!python -m json.tool
+
+"
+" Handlebars
+"
+let g:mustache_abbreviations = 1
 
 "
 " Colorscheme
