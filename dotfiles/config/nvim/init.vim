@@ -113,7 +113,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 
 let s:headers = system('find ~/.rubies/*/include/* -type d -maxdepth 1')
 au FileType c let g:syntastic_c_include_dirs = split(s:headers, '\n')
