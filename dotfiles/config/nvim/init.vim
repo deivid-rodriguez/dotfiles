@@ -163,6 +163,11 @@ set pastetoggle=<F9>
 autocmd BufNewFile,BufRead ~/Proyectos/ruby/* set tabstop=8 nolist
 
 "
+" Settings for specific dirs
+"
+autocmd BufNewFile,BufRead *.js.es6 set filetype=javascript
+
+"
 " Filetype autocompletion
 "
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
