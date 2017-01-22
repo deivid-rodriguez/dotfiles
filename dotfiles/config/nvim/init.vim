@@ -158,6 +158,11 @@ map ,n j0f"lct"
 set pastetoggle=<F9>
 
 "
+" Settings for specific dirs
+"
+autocmd BufNewFile,BufRead ~/Proyectos/ruby/* set tabstop=8 nolist
+
+"
 " Filetype autocompletion
 "
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -186,11 +191,6 @@ let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsListSnippets='<c-l>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<S-tab>'
-
-"
-" Settings for specific dirs
-"
-autocmd BufNewFile,BufRead ~/Proyectos/ruby/* set tabstop=8 nolist
 
 "
 " Markdown
