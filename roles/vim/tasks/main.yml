@@ -2,7 +2,7 @@
 
 - name: Setup neovim repo sources
   become: true
-  apt_repository: repo='ppa:neovim-ppa/unstable' codename=xenial state=present
+  apt_repository: repo='ppa:neovim-ppa/stable' codename=xenial state=present
 
 - name: Install neovim
   become: true
