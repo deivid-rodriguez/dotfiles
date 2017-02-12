@@ -1,14 +1,19 @@
+GIT
+  remote: https://github.com/brigade/overcommit
+  revision: d486e96d93dd58a7f96a22a0365cc11de8164098
+  specs:
+    overcommit (0.38.0)
+      childprocess (~> 0.6.1)
+      iniparse (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.3.0)
-    childprocess (0.5.9)
+    childprocess (0.6.1)
       ffi (~> 1.0, >= 1.0.11)
-    ffi (1.9.14)
+    ffi (1.9.17)
     iniparse (1.4.2)
-    overcommit (0.37.0)
-      childprocess (~> 0.5.8)
-      iniparse (~> 1.4)
     parser (2.3.3.1)
       ast (~> 2.2)
     powerpack (0.1.1)
@@ -26,7 +31,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  overcommit (= 0.37.0)
+  overcommit!
   rubocop (= 0.46.0)
 
 RUBY VERSION
