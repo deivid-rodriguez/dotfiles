@@ -4,5 +4,5 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "overcommit", "0.37.0"
-gem "rubocop", "0.46.0"
+gem "overcommit", git: "https://github.com/brigade/overcommit"
+gem "rubocop", "0.47.1"
