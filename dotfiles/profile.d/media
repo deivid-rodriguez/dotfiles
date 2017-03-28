@@ -18,5 +18,11 @@ function download_mp3 {
 # @param $2 Target gif
 #
 function video2gif {
+  if [ "$#" -ne 2 ]
+  then
+    echo "Usage: video2gif <input>.mp4 <output>.gif"
+    return
+  fi
+
   convert -set delay 10 -layers Optimize "$1" "$2"
 }
