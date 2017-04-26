@@ -1,20 +1,11 @@
 ---
 
-- name: Install requirements
-  become: true
-  apt: name={{item}} state=latest
-  with_items:
-    - cabal-install
-    - ghc
-
 - name: Install tmux
   become: true
   apt: name=tmux state=latest
 
 - name: Install shellcheck
-  shell: cabal update && cabal install shellcheck
-  args:
-    creates: ~/.cabal/bin/shellcheck
+  homebrew: name=shellcheck state=latest
 
 - name: Install ag
   become: true
