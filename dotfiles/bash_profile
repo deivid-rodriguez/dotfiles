@@ -61,3 +61,8 @@ fi
 # Set custom prompt
 #
 PS1='\[\033[49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+
+#
+# Activate direnv
+#
+eval "$(direnv hook bash)"

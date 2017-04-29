@@ -15,3 +15,6 @@ tags
 
 # Mac OSX garbage
 .DS_Store
+
+# Direnv configs
+.envrc

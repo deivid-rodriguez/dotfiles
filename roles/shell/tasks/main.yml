@@ -10,3 +10,7 @@
 - name: Install ag
   become: true
   apt: name=silversearcher-ag state=present
+
+- name: Install direnv
+  become: true
+  apt: name=direnv
