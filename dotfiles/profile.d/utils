@@ -13,9 +13,21 @@ function search_and_replace {
 }
 
 #
-# Generates a Rails like migration timestamp. Useful for rebasing when there
+# Updates a migration's timestamp. Useful for rebasing when there
 # are outdated migrations.
 #
-function rails_migration_timestamp {
-  date +%Y%m%d%H%M%S
+# @param $1 Migration timestamp that needs to be brought up to date
+#
+function update_migration_timestamp {
+  local migration
+
+  migration=$(find db/migrate -name "$1_*.rb")
+
+  if [ "$(echo "$migration" | wc -l)" -gt 1 ]
+  then
+    echo "*** You have several migrations for the same timestamp."
+    return 1
+  fi
+
+  mv "$migration" "${migration//$1/$(date +%Y%m%d%H%M%S)}"
 }
