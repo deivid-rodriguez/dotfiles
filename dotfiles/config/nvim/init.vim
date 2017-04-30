@@ -113,7 +113,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_ruby_rubocop_exec = system('bundle show rubocop')
+let s:rubocop_home = systemlist('bundle show rubocop')[0]
+let g:syntastic_ruby_rubocop_exec = join([s:rubocop_home, 'bin', 'rubocop'], '/')
+
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 let g:syntastic_scss_checkers = ['stylelint']
 
