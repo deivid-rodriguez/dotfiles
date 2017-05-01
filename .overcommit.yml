@@ -28,6 +28,7 @@ PreCommit:
     enabled: true
     exclude:
       - dotfiles/bin/*
+      - bin/*
 
   RuboCop:
     enabled: true
