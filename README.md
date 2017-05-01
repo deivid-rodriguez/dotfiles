@@ -12,7 +12,7 @@ ansible-playbook -i hosts machine.yml --ask-become-pass
 ## Install dotfiles
 
 ```
-source bootstrap.sh local
+source bootstrap.sh
 ```
 
 [ansible]: https://docs.ansible.com/ansible/index.html
