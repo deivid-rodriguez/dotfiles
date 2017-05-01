@@ -24,10 +24,14 @@ PreCommit:
   LocalPathsInGemfile:
     enabled: true
 
+  Mdl:
+    enabled: true
+
   ExecutePermissions:
     enabled: true
     exclude:
       - dotfiles/bin/*
+      - bin/*
 
   RuboCop:
     enabled: true
