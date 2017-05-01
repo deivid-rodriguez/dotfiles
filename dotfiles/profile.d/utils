@@ -31,3 +31,30 @@ function update_migration_timestamp {
 
   mv "$migration" "${migration//$1/$(date +%Y%m%d%H%M%S)}"
 }
+
+#
+# Finds the branch a migration timestamp belongs to.
+#
+# Sometimes you forget to undo a migration when switching out from a branch.
+# This function find which branch a "********** NO FILE **********" migration
+# belongs to, so you can switch to it to undo it.
+#
+# @param $1 Migration timestamp that needs to be found
+#
+function find_migration_timestamp {
+  local branches
+
+  branches=$(git branch --no-color | cut -c3-)
+
+  for branch in $branches
+  do
+    if git ls-tree --full-name "$branch:db/migrate" | grep -q "$1"
+    then
+      echo "Migration with timestamp $1 found in branch $branch"
+      return 0
+    fi
+  done
+
+  echo "Migration with timestamp $1 not found in any branch"
+  return 1
+}
