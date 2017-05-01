@@ -6,6 +6,13 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     ffi (1.9.18)
     iniparse (1.4.2)
+    kramdown (1.13.2)
+    mdl (0.4.0)
+      kramdown (~> 1.12, >= 1.12.0)
+      mixlib-cli (~> 1.7, >= 1.7.0)
+      mixlib-config (~> 2.2, >= 2.2.1)
+    mixlib-cli (1.7.0)
+    mixlib-config (2.2.4)
     overcommit (0.39.1)
       childprocess (~> 0.6.3)
       iniparse (~> 1.4)
@@ -28,6 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mdl (= 0.4.0)
   overcommit (= 0.39.1)
   rubocop (= 0.48.1)
 

@@ -24,6 +24,9 @@ PreCommit:
   LocalPathsInGemfile:
     enabled: true
 
+  Mdl:
+    enabled: true
+
   ExecutePermissions:
     enabled: true
     exclude:

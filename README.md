@@ -8,7 +8,6 @@ Install [ansible] >= 2.3 and run
 ansible-playbook -i hosts machine.yml --ask-become-pass
 ```
 
-
 ## Install dotfiles
 
 ```
