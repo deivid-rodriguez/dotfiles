@@ -18,7 +18,7 @@
            state=present
 
 - name: Install
-  apt: name=docker-engine update_cache=yes state=latest
+  apt: name=docker-engine state=latest
 
 - name: Startup
   service: name=docker state=started
