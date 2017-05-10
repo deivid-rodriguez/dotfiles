@@ -58,9 +58,17 @@ if [ -f "$HOME/.bash_completion" ]; then
 fi
 
 #
+# Set some color variables
+#
+turquoise="\[\033[49;36m\]"
+blue="\[\033[01;34m\]"
+yellow="\[\033[33m\]"
+reset="\[\033[00m\]"
+
+#
 # Set custom prompt
 #
-PS1='\[\033[49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+PS1="$yellow\$(__git_ps1 '(%s) ')$turquoise\u@\h$blue \w \$ $reset"
 
 #
 # Activate direnv
