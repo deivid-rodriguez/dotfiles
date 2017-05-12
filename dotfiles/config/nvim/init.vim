@@ -26,23 +26,23 @@ Plug 'kien/ctrlp.vim'
 " BufExplorer
 Plug 'jlanzarotta/bufexplorer'
 
-" Ruby Enhancements
+" Ruby enhancements
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 
-" Rails Enhancements
+" Rails enhancements
 Plug 'tpope/vim-rails'
 
 " Rake enhancements
 Plug 'tpope/vim-rake'
 
-" Markdown Enhancements
+" Markdown enhancements
 Plug 'plasticboy/vim-markdown'
 
-" Slim Template Engine syntax
+" Slim template engine syntax
 Plug 'slim-template/vim-slim'
 
-" Coffee Script enhancements
+" CoffeeScript enhancements
 Plug 'kchmck/vim-coffee-script'
 
 " Ctags generation
