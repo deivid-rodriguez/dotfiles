@@ -28,13 +28,12 @@ Plug 'jlanzarotta/bufexplorer'
 
 " Ruby enhancements
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-endwise'
-
-" Rails enhancements
 Plug 'tpope/vim-rails'
-
-" Rake enhancements
 Plug 'tpope/vim-rake'
+Plug 'tpope/vim-bundler'
+
+" Auto-close keywords
+Plug 'tpope/vim-endwise'
 
 " Markdown enhancements
 Plug 'plasticboy/vim-markdown'
