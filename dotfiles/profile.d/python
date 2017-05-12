@@ -1,6 +1,0 @@
-#!/bin/bash
-
-path_append "$HOME/.pyenv/bin"
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"

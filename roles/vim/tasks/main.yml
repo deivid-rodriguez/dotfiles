@@ -8,17 +8,12 @@
   become: true
   apt: name=neovim update_cache=yes state=latest
 
-- name: Install python modules prerrequisites
+- name: Install python modules
   become: true
   apt: name={{item}} state=latest
   with_items:
-    - python-dev
-    - python-pip
-    - python3-dev
-    - python3-pip
-
-- name: Install python module
-  pip: name=neovim state=latest extra_args='--user'
+    - python-neovim
+    - python3-neovim
 
 - name: Install clipboard support
   become: true
