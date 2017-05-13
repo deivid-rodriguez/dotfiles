@@ -18,7 +18,7 @@ Plug 'freeo/vim-kalisi'
 Plug 'tpope/vim-fugitive'
 
 " Syntax checker
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 
 " Fuzzy file, buffer, mru, tag finder
 Plug 'kien/ctrlp.vim'
@@ -109,17 +109,11 @@ set mousemodel=popup
 "
 " Syntax
 "
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:neomake_ruby_enabled_makers = ['rubocop']
+let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
+let g:neomake_scss_enabled_makers = ['stylelint']
 
-let g:syntastic_ruby_checkers = ['rubocop']
-let s:rubocop_home = systemlist('bundle show rubocop')[0]
-let g:syntastic_ruby_rubocop_exec = join([s:rubocop_home, 'bin', 'rubocop'], '/')
-
-let g:syntastic_javascript_checkers = ['eslint', 'jshint']
-let g:syntastic_scss_checkers = ['stylelint']
+autocmd! BufWritePost * Neomake
 
 "
 " Swap files
