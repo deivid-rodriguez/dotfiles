@@ -139,6 +139,7 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 let g:test#preserve_screen = 1
+let test#strategy = "neomake"
 
 "
 " Misc maps
