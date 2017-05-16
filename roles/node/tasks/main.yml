@@ -16,3 +16,9 @@
     name: npm
     global: yes
     state: latest
+
+- name: Install stylelint
+  npm:
+    name: stylelint
+    global: yes
+    state: latest
