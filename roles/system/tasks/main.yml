@@ -1,7 +1,11 @@
 ---
 
 - name: Install GTop
-  apt: name=gir1.2-gtop-2.0 state=latest
+  apt:
+    name: gir1.2-gtop-2.0
+    state: latest
 
 - name: Install Hamster Indicator
-  apt: name=hamster-indicator state=latest
+  apt:
+    name: hamster-indicator
+    state: latest

@@ -1,33 +1,48 @@
 ---
 
 - name: Install prerrequisites
-  apt: name={{item}} state=latest
+  apt:
+    name: "{{item}}"
+    state: latest
   with_items:
     - linux-image-generic
     - linux-image-extra-{{ansible_kernel}}
     - linux-image-extra-virtual
 
 - name: Setup repo sources
-  apt_repository: \
-    repo='deb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial main'
-    state=present
+  apt_repository:
+    repo: 'deb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial main'
+    state: present
 
 - name: Setup apt key
-  apt_key: keyserver=hkp://ha.pool.sks-keyservers.net:80
-           id=58118E89F3A912897C070ADBF76221572C52609D
-           state=present
+  apt_key:
+    keyserver: hkp://ha.pool.sks-keyservers.net:80
+    id: 58118E89F3A912897C070ADBF76221572C52609D
+    state: present
 
 - name: Install
-  apt: name=docker-engine state=latest
+  apt:
+    name: docker-engine
+    state: latest
 
 - name: Startup
-  service: name=docker state=started
+  service:
+    name: docker
+    state: started
 
 - name: Add group
-  group: name=docker state=present
+  group:
+    name: docker
+    state: present
 
 - name: Configure for non-root usage (requires manual re-login)
-  user: name={{lookup('env', 'USER')}} groups=docker append=yes
+  user:
+    name: "{{lookup('env', 'USER')}}"
+    groups: docker
+    append: yes
 
 - name: Download docker-compose
-  get_url: url={{compose_url}} dest=/usr/local/bin/docker-compose mode=0755
+  get_url:
+    url: "{{compose_url}}"
+    dest: /usr/local/bin/docker-compose
+    mode: 0755
