@@ -39,6 +39,5 @@ path_append "$HOME/.local/bin"
 # Language customizations
 #
 source "$custom_folder/bash"
-source "$custom_folder/js"
 source "$custom_folder/latex"
 source "$custom_folder/ruby"
