@@ -11,7 +11,7 @@
 
 - name: Setup repo sources
   apt_repository:
-    repo: 'deb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial main'
+    repo: deb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial main
     state: present
 
 - name: Setup apt key
