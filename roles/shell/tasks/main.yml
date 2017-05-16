@@ -15,7 +15,7 @@
   become: true
   apt:
     name: silversearcher-ag
-    state: present
+    state: latest
 
 - name: Install direnv
   become: true
