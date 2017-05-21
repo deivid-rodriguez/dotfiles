@@ -29,7 +29,7 @@ function update_migration_timestamp {
     return 1
   fi
 
-  mv "$migration" "${migration//$1/$(date +%Y%m%d%H%M%S)}"
+  mv "$migration" "${migration//$1/$(generate_migration_timestamp)}"
 }
 
 #
@@ -57,4 +57,11 @@ function find_migration_timestamp {
 
   echo "Migration with timestamp $1 not found in any branch"
   return 1
+}
+
+#
+# Generates a DB migration timestamp in Rails format
+#
+function generate_migration_timestamp {
+  date +%Y%m%d%H%M%S
 }
