@@ -154,6 +154,9 @@ map <leader>q :bd<CR>
 " quickly save buffer
 map <leader>w :w<CR>
 
+" copy word to system selection registers
+map <leader>c "*yw
+
 "
 " Paste mode
 "
