@@ -144,9 +144,15 @@ let test#strategy = "neomake"
 "
 " Misc maps
 "
-map ,r :e %<CR>                   " reload file.
-map ,q :bd<CR>                    " close buffer
-map ,w :w<CR>
+
+" reload file.
+map <leader>r :e %<CR>
+
+" quickly close buffer
+map <leader>q :bd<CR>
+
+" quickly save buffer
+map <leader>w :w<CR>
 
 "
 " Paste mode
