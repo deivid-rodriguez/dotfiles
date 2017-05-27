@@ -147,7 +147,6 @@ let test#strategy = "neomake"
 map ,r :e %<CR>                   " reload file.
 map ,q :bd<CR>                    " close buffer
 map ,w :w<CR>
-map ,c :retab<CR> :%s/  *$//<CR>  " clean tabs and spaces at end of line
 
 "
 " Paste mode
