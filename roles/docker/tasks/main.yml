@@ -40,8 +40,14 @@
     groups: docker
     append: yes
 
+- name: Detect docker-compose version
+  shell: "docker-compose --version | awk -F'[ ,]' '{ print $3 }'"
+  register: compose
+
 - name: Download docker-compose
   get_url:
     url: "{{compose_url}}"
+    force: yes
     dest: /usr/local/bin/docker-compose
     mode: 0755
+  when: compose.stdout != compose_version
