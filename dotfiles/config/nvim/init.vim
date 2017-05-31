@@ -32,8 +32,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-bundler'
 
-" Auto-close keywords
+" Edition enhancements
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
 
 " Markdown enhancements
 Plug 'plasticboy/vim-markdown'
