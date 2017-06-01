@@ -36,9 +36,6 @@ PreCommit:
   RuboCop:
     enabled: true
 
-  ScssLint:
-    enabled: true
-
   ShellCheck:
     enabled: true
     flags: ['--format=gcc']
@@ -49,9 +46,6 @@ PreCommit:
       - dotfiles/completion.d/*
       - dotfiles/profile
       - dotfiles/profile.d/*
-
-  SlimLint:
-    enabled: true
 
   TrailingWhitespace:
     enabled: true
