@@ -8,14 +8,14 @@ AllCops:
 Rails:
   Enabled: true
 
+Layout/ExtraSpacing:
+  Enabled: true
+
 Style/ModuleFunction:
   Enabled: false
 
 Style/Lambda:
   Enabled: false
-
-Style/ExtraSpacing:
-  Enabled: true
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
