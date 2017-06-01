@@ -5,7 +5,7 @@ GEM
     childprocess (0.6.3)
       ffi (~> 1.0, >= 1.0.11)
     ffi (1.9.18)
-    iniparse (1.4.2)
+    iniparse (1.4.3)
     kramdown (1.13.2)
     mdl (0.4.0)
       kramdown (~> 1.12, >= 1.12.0)
