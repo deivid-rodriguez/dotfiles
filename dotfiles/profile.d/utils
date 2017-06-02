@@ -9,7 +9,7 @@
 function search_and_replace {
   if [ $# -ne 2 ]
   then
-    echo "search_and_replace <old> <new>"
+    echo "*** search_and_replace <old> <new>"
     return 1
   fi
 
@@ -59,7 +59,7 @@ function find_migration_timestamp {
     fi
   done
 
-  echo "Migration with timestamp $1 not found in any branch"
+  echo "*** Migration with timestamp $1 not found in any branch"
   return 1
 }
 
