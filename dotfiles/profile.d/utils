@@ -10,7 +10,7 @@ function search_and_replace {
   if [ $# -ne 2 ]
   then
     echo "search_and_replace <old> <new>"
-    return
+    return 1
   fi
 
   git grep -I --name-only '' | xargs perl -pi -e "s/$1/$2/g"
