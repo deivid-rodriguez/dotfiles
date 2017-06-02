@@ -9,7 +9,7 @@
 function search_and_replace {
   [ $# -eq 0 ] && { echo "search_and_replace <old> <new>"; return; }
 
-  git grep -Il '' | xargs perl -pi -e "s/$1/$2/g"
+  git grep -I --name-only '' | xargs perl -pi -e "s/$1/$2/g"
 }
 
 #
