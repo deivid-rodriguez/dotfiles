@@ -7,7 +7,11 @@
 # @param $2 New string to replace it
 #
 function search_and_replace {
-  [ $# -ne 2 ] && { echo "search_and_replace <old> <new>"; return; }
+  if [ $# -ne 2 ]
+  then
+    echo "search_and_replace <old> <new>"
+    return
+  fi
 
   git grep -I --name-only '' | xargs perl -pi -e "s/$1/$2/g"
 }
