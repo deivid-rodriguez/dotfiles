@@ -12,8 +12,6 @@ branches:
   only:
     - master
 
-bundler_args:
-
 env:
   global:
     - SHELLCHECK_OPTS='-x -e SC1090'
