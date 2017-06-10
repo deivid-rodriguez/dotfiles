@@ -1,14 +1,16 @@
 #!/bin/bash
 
-#
-# Enable chruby
-#
-source /usr/local/share/chruby/chruby.sh
+function enable_chruby {
+  source /usr/local/share/chruby/chruby.sh
+}
 
-#
-# Select default Ruby
-#
-source /usr/local/share/chruby/auto.sh
+enable_chruby
+
+function enable_auto_chruby {
+  source /usr/local/share/chruby/auto.sh
+}
+
+enable_auto_chruby
 
 #
 # JRUBY_OPTS to make jruby startup time acceptable

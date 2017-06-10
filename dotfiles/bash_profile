@@ -43,19 +43,21 @@ shopt -s globstar
 #
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-#
-# Load alias definitions
-#
-if [ -f "$HOME/.bash_aliases" ]; then
-  source "$HOME/.bash_aliases"
-fi
+function load_aliases {
+  if [ -f "$HOME/.bash_aliases" ]; then
+    source "$HOME/.bash_aliases"
+  fi
+}
 
-#
-# Load completions
-#
-if [ -f "$HOME/.bash_completion" ]; then
-  source "$HOME/.bash_completion"
-fi
+load_aliases
+
+function load_completions {
+  if [ -f "$HOME/.bash_completion" ]; then
+    source "$HOME/.bash_completion"
+  fi
+}
+
+load_completions
 
 #
 # Set some color variables
