@@ -1,0 +1,32 @@
+---
+
+engines:
+  bundler-audit:
+    enabled: true
+
+  duplication:
+    enabled: true
+
+    config:
+      languages:
+        - ruby
+
+  fixme:
+    enabled: true
+
+  markdownlint:
+    enabled: true
+
+  rubocop:
+    enabled: true
+    channel: rubocop-0-48
+
+  shellcheck:
+    enabled: true
+    include:
+      - bootstrap.sh
+      - dotfiles/bashrc
+      - dotfiles/bash_profile
+      - dotfiles/completion.d/*
+      - dotfiles/profile
+      - dotfiles/profile.d/*

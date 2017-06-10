@@ -8,7 +8,7 @@ AllCops:
 Rails:
   Enabled: true
 
-Layout/ExtraSpacing:
+Style/ExtraSpacing:
   Enabled: true
 
 Style/ModuleFunction:
