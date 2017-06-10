@@ -2,7 +2,7 @@
 
 cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 
-function sync_it() {
+function sync_it {
   rsync -ah --delete dotfiles/profile.d/ ~/.profile.d
   rsync -ah --delete dotfiles/completion.d/ ~/.completion.d
   rsync -ah dotfiles/config/ ~/.config
@@ -15,7 +15,7 @@ function sync_it() {
   done
 }
 
-function source_it() {
+function source_it {
   source "$HOME/.bash_profile"
 }
 

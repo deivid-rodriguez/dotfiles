@@ -3,7 +3,7 @@
 #
 # Prints usage information
 #
-function usage() {
+function usage {
   cat <<USAGE
 
   cconv[ -f <currency>][ -t <currency> ][ -d <date>] <amount>
