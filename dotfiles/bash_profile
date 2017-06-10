@@ -3,6 +3,8 @@
 #
 # Load the default .profile
 #
+
+# shellcheck disable=SC1090
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 #
@@ -43,24 +45,36 @@ shopt -s globstar
 #
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-#
-# Load alias definitions
-#
-if [ -f "$HOME/.bash_aliases" ]; then
-  source "$HOME/.bash_aliases"
-fi
+# shellcheck disable=SC1090
+function load_aliases {
+  if [ -f "$HOME/.bash_aliases" ]; then
+    source "$HOME/.bash_aliases"
+  fi
+}
+
+load_aliases
+
+# shellcheck disable=SC1090
+function load_completions {
+  if [ -f "$HOME/.bash_completion" ]; then
+    source "$HOME/.bash_completion"
+  fi
+}
+
+load_completions
 
 #
-# Load completions
+# Set some color variables
 #
-if [ -f "$HOME/.bash_completion" ]; then
-  source "$HOME/.bash_completion"
-fi
+turquoise="\[\033[49;36m\]"
+blue="\[\033[01;34m\]"
+yellow="\[\033[33m\]"
+reset="\[\033[00m\]"
 
 #
 # Set custom prompt
 #
-PS1='\[\033[49;36m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+PS1="$yellow\$(__git_ps1 '(%s) ')$turquoise\u@\h$blue \w \$ $reset"
 
 #
 # Activate direnv

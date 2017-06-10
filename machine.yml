@@ -5,6 +5,7 @@
   roles:
   - docker
   - git
+  - node
   - ruby
   - system
 

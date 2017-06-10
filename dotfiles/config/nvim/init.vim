@@ -14,8 +14,11 @@ call plug#begin()
 " Colorscheme
 Plug 'freeo/vim-kalisi'
 
+" Git utils
+Plug 'tpope/vim-fugitive'
+
 " Syntax checker
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 
 " Fuzzy file, buffer, mru, tag finder
 Plug 'kien/ctrlp.vim'
@@ -23,23 +26,23 @@ Plug 'kien/ctrlp.vim'
 " BufExplorer
 Plug 'jlanzarotta/bufexplorer'
 
-" Ruby Enhancements
+" Ruby enhancements
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-endwise'
-
-" Rails Enhancements
 Plug 'tpope/vim-rails'
-
-" Rake enhancements
 Plug 'tpope/vim-rake'
+Plug 'tpope/vim-bundler'
 
-" Markdown Enhancements
+" Edition enhancements
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
+
+" Markdown enhancements
 Plug 'plasticboy/vim-markdown'
 
-" Slim Template Engine syntax
+" Slim template engine syntax
 Plug 'slim-template/vim-slim'
 
-" Coffee Script enhancements
+" CoffeeScript enhancements
 Plug 'kchmck/vim-coffee-script'
 
 " Ctags generation
@@ -107,20 +110,13 @@ set mousemodel=popup
 "
 " Syntax
 "
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:neomake_ruby_rubocop_maker = { 'args': ['--display-cop-names'] }
 
-let g:syntastic_ruby_checkers = ['rubocop']
-let s:rubocop_home = systemlist('bundle show rubocop')[0]
-let g:syntastic_ruby_rubocop_exec = join([s:rubocop_home, 'bin', 'rubocop'], '/')
+let g:neomake_ruby_enabled_makers = ['rubocop']
+let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
+let g:neomake_scss_enabled_makers = ['stylelint']
 
-let g:syntastic_javascript_checkers = ['eslint', 'jshint']
-let g:syntastic_scss_checkers = ['stylelint']
-
-let s:headers = system('find ~/.rubies/*/include/* -type d -maxdepth 1')
-autocmd FileType c let g:syntastic_c_include_dirs = split(s:headers, '\n')
+autocmd! BufWritePost * Neomake
 
 "
 " Swap files
@@ -146,15 +142,23 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 let g:test#preserve_screen = 1
+let test#strategy = "neomake"
 
 "
 " Misc maps
 "
-map ,r :e %<CR>                   " reload file.
-map ,q :bd<CR>                    " close buffer
-map ,w :w<CR>
-map ,c :retab<CR> :%s/  *$//<CR>  " clean tabs and spaces at end of line
-map ,n j0f"lct"
+
+" reload file.
+map <leader>r :e %<CR>
+
+" quickly close buffer
+map <leader>q :bd<CR>
+
+" quickly save buffer
+map <leader>w :w<CR>
+
+" copy word to system selection registers
+map <leader>c "*yw
 
 "
 " Paste mode

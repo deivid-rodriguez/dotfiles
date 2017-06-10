@@ -1,7 +1,9 @@
 ---
 
 - name: Ruby dependencies
-  apt: name={{item}} state=latest
+  apt:
+    name: "{{item}}"
+    state: latest
   with_items:
     - build-essential
     - zlib1g-dev
@@ -13,11 +15,14 @@
     - libffi-dev
 
 - name: Check ruby-install installation
-  stat: path=/usr/local/bin/ruby-install
+  stat:
+    path: /usr/local/bin/ruby-install
   register: ruby_install
 
 - name: Download ruby-install
-  git: repo=https://github.com/postmodern/ruby-install dest=/tmp/ruby-install
+  git:
+    repo: https://github.com/postmodern/ruby-install
+    dest: /tmp/ruby-install
   when: ruby_install.stat.exists == false
 
 - name: Install ruby-install
@@ -25,11 +30,14 @@
   when: ruby_install.stat.exists == false
 
 - name: Check chruby installation
-  stat: path=/usr/local/share/chruby/chruby.sh
+  stat:
+    path: /usr/local/share/chruby/chruby.sh
   register: chruby
 
 - name: Download chruby
-  git: repo=https://github.com/postmodern/chruby dest=/tmp/chruby
+  git:
+    repo: https://github.com/postmodern/chruby
+    dest: /tmp/chruby
   when: chruby.stat.exists == false
 
 - name: Install chruby

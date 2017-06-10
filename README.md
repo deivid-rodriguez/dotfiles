@@ -2,6 +2,9 @@
 
 ## Setup development machine
 
+The following has only been tested on Linux Mint 18.1, but it should work on any
+Ubuntu-like distribution.
+
 Install [ansible] >= 2.3 and run
 
 ```bash

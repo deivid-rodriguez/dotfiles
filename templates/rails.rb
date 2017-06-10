@@ -36,8 +36,8 @@ after_bundle do
   # Configure RuboCop
   copy_file "rails/.rubocop.yml", ".rubocop.yml"
 
-  # Configure overcommit
-  copy_file "rails/.overcommit.yml", ".overcommit.yml"
+  # Configure codeclimate
+  copy_file "rails/.codeclimate.yml", ".codeclimate.yml"
 
   # Copy spring binstub
   copy_file "rails/bin/spring", "bin/spring"
@@ -51,10 +51,6 @@ after_bundle do
 
   # Initialize source control
   git :init
-
-  # Install & sign git hooks
-  run "overcommit --install"
-  run "overcommit --sign"
 
   # Initial commit
   baseuri = "https://raw.githubusercontent.com/deivid-rodriguez/dotfiles/master"

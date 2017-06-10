@@ -7,9 +7,13 @@
 # @param $2 New string to replace it
 #
 function search_and_replace {
-  [ $# -eq 0 ] && { echo "search_and_replace <old> <new>"; return; }
+  if [ $# -ne 2 ]
+  then
+    echo "*** search_and_replace <old> <new>"
+    return 1
+  fi
 
-  git grep -Il '' | xargs perl -pi -e "s/$1/$2/g"
+  git grep -I --name-only '' | xargs perl -pi -e "s/$1/$2/g"
 }
 
 #
@@ -29,7 +33,7 @@ function update_migration_timestamp {
     return 1
   fi
 
-  mv "$migration" "${migration//$1/$(date +%Y%m%d%H%M%S)}"
+  mv "$migration" "${migration//$1/$(generate_migration_timestamp)}"
 }
 
 #
@@ -55,6 +59,13 @@ function find_migration_timestamp {
     fi
   done
 
-  echo "Migration with timestamp $1 not found in any branch"
+  echo "*** Migration with timestamp $1 not found in any branch"
   return 1
+}
+
+#
+# Generates a DB migration timestamp in Rails format
+#
+function generate_migration_timestamp {
+  date +%Y%m%d%H%M%S
 }

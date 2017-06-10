@@ -1,6 +1,6 @@
 ---
 
-compose_version: 1.9.0
+compose_version: 1.13.0
 compose_repo: https://github.com/docker/compose
 compose_releases: "{{compose_repo}}/releases/download"
 compose_file: docker-compose-{{ansible_system}}-{{ansible_architecture}}
