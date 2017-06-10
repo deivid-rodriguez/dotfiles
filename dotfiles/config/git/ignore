@@ -18,3 +18,6 @@ tags
 
 # Direnv configs
 .envrc
+
+# Bundler sticky config
+.bundle
