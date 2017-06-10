@@ -15,6 +15,7 @@ function sync_it {
   done
 }
 
+# shellcheck disable=SC1090
 function source_it {
   source "$HOME/.bash_profile"
 }

@@ -12,10 +12,6 @@ branches:
   only:
     - master
 
-env:
-  global:
-    - SHELLCHECK_OPTS='-x -e SC1090'
-
 language: ruby
 
 rvm:

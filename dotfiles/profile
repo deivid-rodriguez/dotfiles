@@ -25,6 +25,7 @@ custom_folder="$HOME/.profile.d"
 # General utilities
 #
 
+# shellcheck disable=SC1090
 function load_general_utils {
   source "$custom_folder/utils"
   source "$custom_folder/paths"
@@ -43,8 +44,8 @@ unset load_general_utils
 #
 path_append "$HOME/.local/bin"
 
+# shellcheck disable=SC1090
 function load_language_customizations {
-  source "$custom_folder/bash"
   source "$custom_folder/latex"
   source "$custom_folder/ruby"
 }

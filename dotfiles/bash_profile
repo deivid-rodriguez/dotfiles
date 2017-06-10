@@ -3,6 +3,8 @@
 #
 # Load the default .profile
 #
+
+# shellcheck disable=SC1090
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 #
@@ -43,6 +45,7 @@ shopt -s globstar
 #
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# shellcheck disable=SC1090
 function load_aliases {
   if [ -f "$HOME/.bash_aliases" ]; then
     source "$HOME/.bash_aliases"
@@ -51,6 +54,7 @@ function load_aliases {
 
 load_aliases
 
+# shellcheck disable=SC1090
 function load_completions {
   if [ -f "$HOME/.bash_completion" ]; then
     source "$HOME/.bash_completion"
