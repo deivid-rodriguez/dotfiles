@@ -1,7 +1,11 @@
 #
 # Custom user completions
 #
-for f in $HOME/.completion.d/*
-do
-  source "$f"
-done
+ruby_completions="$HOME/.completion.d/ruby"
+
+source "$ruby_completions/completion-bundle"
+source "$ruby_completions/completion-gem"
+source "$ruby_completions/completion-jruby"
+source "$ruby_completions/completion-rails"
+source "$ruby_completions/completion-rake"
+source "$ruby_completions/completion-ruby"

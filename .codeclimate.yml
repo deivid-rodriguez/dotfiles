@@ -30,3 +30,6 @@ engines:
       - dotfiles/completion.d/*
       - dotfiles/profile
       - dotfiles/profile.d/*
+
+exclude_paths:
+  - dotfiles/completion.d/ruby

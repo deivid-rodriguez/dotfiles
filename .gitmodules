@@ -1,0 +1,3 @@
+[submodule "dotfiles/completion.d/ruby"]
+	path = dotfiles/completion.d/ruby
+	url = git@github.com:mernen/completion-ruby.git
