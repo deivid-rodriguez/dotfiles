@@ -3,6 +3,7 @@
 - name: Setup neovim repo sources
   become: true
   apt_repository:
+    filename: neovim
     repo: ppa:neovim-ppa/stable
     codename: xenial
     state: present
