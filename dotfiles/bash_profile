@@ -6,6 +6,22 @@
 [ -z "$PS1" ] && return
 
 #
+# Set default editor
+#
+export EDITOR=nvim
+
+#
+# Set default terminal
+#
+export TERM=xterm-256color
+
+#
+# Smart pager
+#
+export PAGER="less"
+export LESS="--no-init --quit-if-one-screen --raw-control-chars"
+
+#
 # Don't put duplicate lines or lines starting with space in the history. See
 #
 HISTCONTROL=ignoreboth

@@ -2,22 +2,6 @@
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists.
 
 #
-# Set default editor
-#
-export EDITOR=nvim
-
-#
-# Set default terminal
-#
-export TERM=xterm-256color
-
-#
-# Smart pager
-#
-export PAGER="less"
-export LESS="--no-init --quit-if-one-screen --raw-control-chars"
-
-#
 # Load all bash-specific stuff if running bash
 #
 if [ -n "$BASH_VERSION" ]
