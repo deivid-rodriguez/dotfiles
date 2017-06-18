@@ -1,55 +1,10 @@
-#!/bin/bash
-
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists.
 
 #
-# Set default editor
+# Load all bash-specific stuff if running bash
 #
-export EDITOR=nvim
-
-#
-# Set default terminal
-#
-export TERM=xterm-256color
-
-#
-# Smart pager
-#
-export PAGER="less"
-export LESS="--no-init --quit-if-one-screen --raw-control-chars"
-
-custom_folder="$HOME/.profile.d"
-
-#
-# General utilities
-#
-
-# shellcheck disable=SC1090
-function load_general_utils {
-  source "$custom_folder/utils"
-  source "$custom_folder/paths"
-  source "$custom_folder/media"
-  source "$custom_folder/git"
-  source "$custom_folder/git"
-  source "$custom_folder/linuxbrew"
-}
-
-load_general_utils
-
-unset load_general_utils
-
-#
-# Folder for local bins
-#
-path_append "$HOME/.local/bin"
-
-# shellcheck disable=SC1090
-function load_language_customizations {
-  source "$custom_folder/latex"
-  source "$custom_folder/ruby"
-}
-
-load_language_customizations
-
-unset load_language_customizations
+if [ -n "$BASH_VERSION" ]
+then
+  [ -f "$HOME/.bash_profile" ] && . "$HOME/.bash_profile"
+fi

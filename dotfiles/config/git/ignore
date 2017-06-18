@@ -10,9 +10,6 @@ tags
 # Ag
 .agignore
 
-# Tmuxinator
-.tmuxinator.yml
-
 # Mac OSX garbage
 .DS_Store
 
