@@ -25,7 +25,6 @@ engines:
     enabled: true
     include:
       - bootstrap.sh
-      - dotfiles/bashrc
       - dotfiles/bash_profile
       - dotfiles/completion.d/*
       - dotfiles/profile
