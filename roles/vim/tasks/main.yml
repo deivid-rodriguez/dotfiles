@@ -12,7 +12,6 @@
   become: true
   apt:
     name: neovim
-    update_cache: yes
     state: latest
 
 - name: Install python modules
