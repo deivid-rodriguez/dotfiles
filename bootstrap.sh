@@ -17,7 +17,7 @@ function sync_it {
 
 # shellcheck disable=SC1090
 function source_it {
-  source "$HOME/.bash_profile"
+  source "$HOME/.profile"
 }
 
 sync_it

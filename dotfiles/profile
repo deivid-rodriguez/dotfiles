@@ -16,3 +16,11 @@ export TERM=xterm-256color
 #
 export PAGER="less"
 export LESS="--no-init --quit-if-one-screen --raw-control-chars"
+
+#
+# Load all bash-specific stuff if running bash
+#
+if [ -n "$BASH_VERSION" ]
+then
+  [ -f "$HOME/.bash_profile" ] && . "$HOME/.bash_profile"
+fi
