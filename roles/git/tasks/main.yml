@@ -5,23 +5,25 @@
     name: git
     state: latest
 
-- name: Check hub installation
-  stat:
-    path: /usr/local/bin/hub
+- name: Memorize hub installation path
+  stat: path=/usr/local/bin/hub
   register: hub
 
-- name: Download hub
-  get_url:
-    url: "{{hub_url}}"
-    dest: /tmp
-  when: hub.stat.exists == false
+- name: Memorize hub version
+  shell: "hub --version | grep hub | cut -d' ' -f3"
+  register: hub_installed_version
+  ignore_errors: True
 
-- name: Extract hub
-  unarchive:
-    src: /tmp/{{hub_archive}}
-    dest: /tmp
-  when: hub.stat.exists == false
+- block:
+  - name: Download hub
+    get_url: url={{hub_url}} dest=/tmp
 
-- name: Install hub
-  command: creates=/usr/local/bin/hub /tmp/{{hub_folder}}/install
-  when: hub.stat.exists == false
+  - name: Extract hub
+    unarchive: src=/tmp/{{hub_archive}} dest=/tmp
+
+  - name: Install hub
+    command: /tmp/{{hub_folder}}/install
+
+  when:
+    - hub_installed_version|succeeded
+    - hub_installed_version.stdout|version_compare(hub_version, '<')

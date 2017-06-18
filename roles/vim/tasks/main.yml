@@ -3,6 +3,7 @@
 - name: Setup neovim repo sources
   become: true
   apt_repository:
+    filename: neovim
     repo: ppa:neovim-ppa/stable
     codename: xenial
     state: present
@@ -11,7 +12,6 @@
   become: true
   apt:
     name: neovim
-    update_cache: yes
     state: latest
 
 - name: Install python modules
