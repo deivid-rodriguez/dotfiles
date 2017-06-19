@@ -3,61 +3,61 @@
 #
 # Appends to PATH without duplicates
 #
-function path_append {
-  append_folder_to_env "$1" "PATH"
+function PATH_append {
+  path_append "$1" "PATH"
 }
 
 #
 # Appends to MANPATH without duplicates
 #
-function manpath_append {
-  append_folder_to_env "$1" "MANPATH"
+function MANPATH_append {
+  path_append "$1" "MANPATH"
 
-  manpath_keep_configuration_file_list
+  MANPATH_keep_configuration_file_list
 }
 
 #
 # Appends to INFOPATH without duplicates
 #
-function infopath_append {
-  append_folder_to_env "$1" "INFOPATH"
+function INFOPATH_append {
+  path_append "$1" "INFOPATH"
 }
 
 #
 # Prepends to PATH without duplicates
 #
-function path_prepend {
-  prepend_folder_to_env "$1" "PATH"
+function PATH_prepend {
+  path_prepend "$1" "PATH"
 }
 
 #
 # Prepends to MANPATH without duplicates
 #
-function manpath_prepend {
-  prepend_folder_to_env "$1" "MANPATH"
+function MANPATH_prepend {
+  path_prepend "$1" "MANPATH"
 
-  manpath_keep_configuration_file_list
+  MANPATH_keep_configuration_file_list
 }
 
 #
 # Prepends to INFOPATH without duplicates
 #
-function infopath_prepend {
-  prepend_folder_to_env "$1" "INFOPATH"
+function INFOPATH_prepend {
+  path_prepend "$1" "INFOPATH"
 }
 
 #
 # Prepends to XDG_DATA_DIRS without duplicates
 #
-function xdg_data_dirs_prepend {
-  prepend_folder_to_env "$1" "XDG_DATA_DIRS"
+function XDG_DATA_DIRS_prepend {
+  path_prepend "$1" "XDG_DATA_DIRS"
 }
 
 #
 # Appends a folder to an environment variable made of a list of folders
 # separated by colons
 #
-function append_folder_to_env {
+function path_append {
   if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
   then
     export "$2=${!2:+"${!2}:"}$1"
@@ -68,14 +68,14 @@ function append_folder_to_env {
 # Prepends a folder to an environment variable made of a list of folders
 # separated by colons
 #
-function prepend_folder_to_env {
+function path_prepend {
   if [[ ":${!2}:" != *":$1:"* ]]
   then
     export "$2=$1${!2:+":${!2}"}"
   fi
 }
 
-function manpath_keep_configuration_file_list {
+function MANPATH_keep_configuration_file_list {
   if [[ ! $MANPATH =~ :.* ]]
   then
     export MANPATH=":$MANPATH"

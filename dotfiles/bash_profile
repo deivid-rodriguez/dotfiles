@@ -77,7 +77,7 @@ unset load_general_utils
 #
 # Folder for local bins
 #
-path_append "$HOME/.local/bin"
+PATH_append "$HOME/.local/bin"
 
 # shellcheck disable=SC1090
 function load_language_customizations {
