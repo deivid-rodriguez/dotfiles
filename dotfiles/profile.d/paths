@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #
-# Appends to PATH without duplicates and non folders
+# Appends to PATH without duplicates
 #
 function path_append {
   append_folder_to_env "$1" "PATH"
 }
 
 #
-# Appends to MANPATH without duplicates and non folders
+# Appends to MANPATH without duplicates
 #
 function manpath_append {
   append_folder_to_env "$1" "MANPATH"
@@ -17,21 +17,21 @@ function manpath_append {
 }
 
 #
-# Appends to INFOPATH without duplicates and non folders
+# Appends to INFOPATH without duplicates
 #
 function infopath_append {
   append_folder_to_env "$1" "INFOPATH"
 }
 
 #
-# Prepends to PATH without duplicates and non folders
+# Prepends to PATH without duplicates
 #
 function path_prepend {
   prepend_folder_to_env "$1" "PATH"
 }
 
 #
-# Prepends to MANPATH without duplicates and non folders
+# Prepends to MANPATH without duplicates
 #
 function manpath_prepend {
   prepend_folder_to_env "$1" "MANPATH"
@@ -40,14 +40,14 @@ function manpath_prepend {
 }
 
 #
-# Prepends to INFOPATH without duplicates and non folders
+# Prepends to INFOPATH without duplicates
 #
 function infopath_prepend {
   prepend_folder_to_env "$1" "INFOPATH"
 }
 
 #
-# Prepends to XDG_DATA_DIRS without duplicates and non folders
+# Prepends to XDG_DATA_DIRS without duplicates
 #
 function xdg_data_dirs_prepend {
   prepend_folder_to_env "$1" "XDG_DATA_DIRS"
@@ -69,7 +69,7 @@ function append_folder_to_env {
 # separated by colons
 #
 function prepend_folder_to_env {
-  if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
+  if [[ ":${!2}:" != *":$1:"* ]]
   then
     export "$2=$1${!2:+":${!2}"}"
   fi
