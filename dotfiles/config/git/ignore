@@ -8,7 +8,7 @@
 tags
 
 # Ag
-.agignore
+.ignore
 
 # Mac OSX garbage
 .DS_Store
