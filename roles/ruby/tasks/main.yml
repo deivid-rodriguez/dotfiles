@@ -1,6 +1,7 @@
 ---
 
 - name: Ruby dependencies
+  become: true
   apt:
     name: "{{item}}"
     state: latest
@@ -14,32 +15,12 @@
     - libncurses5-dev
     - libffi-dev
 
-- name: Check ruby-install installation
-  stat:
-    path: /usr/local/bin/ruby-install
-  register: ruby_install
-
-- name: Download ruby-install
-  git:
-    repo: https://github.com/postmodern/ruby-install
-    dest: /tmp/ruby-install
-  when: ruby_install.stat.exists == false
-
 - name: Install ruby-install
-  command: chdir=/tmp/ruby-install make install
-  when: ruby_install.stat.exists == false
-
-- name: Check chruby installation
-  stat:
-    path: /usr/local/share/chruby/chruby.sh
-  register: chruby
-
-- name: Download chruby
-  git:
-    repo: https://github.com/postmodern/chruby
-    dest: /tmp/chruby
-  when: chruby.stat.exists == false
+  homebrew:
+    name: ruby-install
+    state: latest
 
 - name: Install chruby
-  command: chdir=/tmp/chruby make install
-  when: chruby.stat.exists == false
+  homebrew:
+    name: chruby
+    state: latest
