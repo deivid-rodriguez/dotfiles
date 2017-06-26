@@ -1,83 +1,137 @@
 #!/bin/bash
 
+# ====== Public interface ======
+
 #
-# Appends to PATH without duplicates and non folders
+# Appends to PATH without duplicates and exports it
 #
-function path_append {
-  append_folder_to_env "$1" "PATH"
+function PATH_append {
+  export PATH
+
+  PATH=$(path_remove "$1"):$1
 }
 
 #
-# Appends to MANPATH without duplicates and non folders
+# Appends to MANPATH without duplicates and exports it
 #
-function manpath_append {
-  append_folder_to_env "$1" "MANPATH"
+function MANPATH_append {
+  export MANPATH
 
-  manpath_keep_configuration_file_list
+  MANPATH=$(manpath_remove "$1"):$1
 }
 
 #
-# Appends to INFOPATH without duplicates and non folders
+# Appends to INFOPATH without duplicates and exports it
 #
-function infopath_append {
-  append_folder_to_env "$1" "INFOPATH"
+function INFOPATH_append {
+  export INFOPATH
+
+  INFOPATH=$(infopath_remove "$1"):$1
 }
 
 #
-# Prepends to PATH without duplicates and non folders
+# Prepends to PATH without duplicates and exports it
 #
-function path_prepend {
-  prepend_folder_to_env "$1" "PATH"
+function PATH_prepend {
+  export PATH
+
+  PATH=$1:$(path_remove "$1")
 }
 
 #
-# Prepends to MANPATH without duplicates and non folders
+# Prepends to MANPATH without duplicates and exports it
 #
-function manpath_prepend {
-  prepend_folder_to_env "$1" "MANPATH"
+function MANPATH_prepend {
+  export MANPATH
 
-  manpath_keep_configuration_file_list
+  MANPATH=$(colon_separated_safe_prepend "$(manpath_remove "$1")" "$1")
 }
 
 #
-# Prepends to INFOPATH without duplicates and non folders
+# Prepends to INFOPATH without duplicates and exports it
 #
-function infopath_prepend {
-  prepend_folder_to_env "$1" "INFOPATH"
+function INFOPATH_prepend {
+  export INFOPATH
+
+  INFOPATH=$1:$(infopath_remove "$1")
 }
 
 #
-# Prepends to XDG_DATA_DIRS without duplicates and non folders
+# Prepends to XDG_DATA_DIRS without duplicates and exports it
 #
-function xdg_data_dirs_prepend {
-  prepend_folder_to_env "$1" "XDG_DATA_DIRS"
+function XDG_DATA_DIRS_prepend {
+  export XDG_DATA_DIRS
+
+  XDG_DATA_DIRS=$1:$(xdg_data_dirs_remove "$1")
 }
 
 #
-# Appends a folder to an environment variable made of a list of folders
-# separated by colons
+# Removes an element from PATH and exports it
 #
-function append_folder_to_env {
-  if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
-  then
-    export "$2=${!2:+"${!2}:"}$1"
-  fi
+function PATH_remove {
+  export PATH
+
+  PATH=$(path_remove "$1")
+}
+
+# ====== Private interface ======
+
+#
+#
+# Removes an element from PATH
+#
+function path_remove {
+  colon_separated_remove "$PATH" "$1"
 }
 
 #
-# Prepends a folder to an environment variable made of a list of folders
-# separated by colons
+# Removes an element from MANPATH
 #
-function prepend_folder_to_env {
-  if [ -d "$1" ] && [[ ":${!2}:" != *":$1:"* ]]
-  then
-    export "$2=$1${!2:+":${!2}"}"
-  fi
+function manpath_remove {
+  colon_separated_remove "$MANPATH" "$1"
 }
 
-function manpath_keep_configuration_file_list {
-  if [[ ! $MANPATH =~ :.* ]]
-  then
-    export MANPATH=":$MANPATH"
-  fi
+#
+# Removes an element from INFOPATH
+#
+function infopath_remove {
+  colon_separated_remove "$INFOPATH" "$1"
+}
+
+#
+# Removes an element from XDG_DATA_DIRS
+#
+function xdg_data_dirs_remove {
+  colon_separated_remove "$XDG_DATA_DIRS" "$1"
+}
+
+#
+# Prepends an element to a colon separated variable
+#
+# Makes sure a leading colon is added if not already present
+#
+function colon_separated_safe_prepend {
+  case $1 in
+    "")
+      echo ":$2"
+      ;;
+    :*)
+      echo ":${2}:${1%:}"
+      ;;
+    *)
+      echo ":${2}:${1}"
+  esac
+}
+
+#
+# Removes a path from a colon separated variable
+#
+function colon_separated_remove {
+  work=:$1:
+
+  work=${work/:$2:/:}
+  work=${work%?}
+  work=${work#?}
+
+  echo "$work"
 }

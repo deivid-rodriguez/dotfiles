@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path_prepend "$HOME/.linuxbrew/bin"
-manpath_prepend "$HOME/.linuxbrew/share/man"
-xdg_data_dirs_prepend "$HOME/.linuxbrew/share"
-infopath_prepend "$HOME/.linuxbrew/share/info"
+PATH_prepend "$HOME/.linuxbrew/bin"
+MANPATH_prepend "$HOME/.linuxbrew/share/man"
+XDG_DATA_DIRS_prepend "$HOME/.linuxbrew/share"
+INFOPATH_prepend "$HOME/.linuxbrew/share/info"
