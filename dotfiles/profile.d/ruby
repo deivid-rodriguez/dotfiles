@@ -1,15 +1,17 @@
 #!/bin/bash
 
+chruby_home="$(brew --repo)/opt/chruby/share/chruby"
+
 function enable_chruby {
-  # shellcheck disable=SC1091
-  source /usr/local/share/chruby/chruby.sh
+  # shellcheck disable=SC1090
+  source "$chruby_home/chruby.sh"
 }
 
 enable_chruby
 
 function enable_auto_chruby {
-  # shellcheck disable=SC1091
-  source /usr/local/share/chruby/auto.sh
+  # shellcheck disable=SC1090
+  source "$chruby_home/auto.sh"
 }
 
 enable_auto_chruby

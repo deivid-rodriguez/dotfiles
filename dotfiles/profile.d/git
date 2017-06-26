@@ -20,8 +20,10 @@ function pr_review {
 # Edit all files with merge conflicts
 #
 function edit_conflicts {
+  top_level=$(git rev-parse --show-toplevel)
+
   files=$(git diff --name-only --diff-filter=U)
   files=($files)
 
-  nvim "${files[@]}"
+  (cd "$top_level" && nvim "${files[@]}")
 }

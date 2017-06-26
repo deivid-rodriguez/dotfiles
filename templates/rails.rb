@@ -4,7 +4,7 @@
 # Reads config file from this repo
 #
 def source_paths
-  [File.expand_path(File.dirname(__FILE__))]
+  [File.expand_path(__dir__)]
 end
 
 copy_file "rails/Gemfile", "Gemfile"
