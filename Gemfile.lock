@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.3.0)
-    kramdown (1.13.2)
+    kramdown (1.14.0)
     mdl (0.4.0)
       kramdown (~> 1.12, >= 1.12.0)
       mixlib-cli (~> 1.7, >= 1.7.0)
