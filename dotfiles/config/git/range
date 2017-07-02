@@ -1,0 +1,22 @@
+#
+# Shows full merge commit changes
+#
+git_range() {
+  cmd=$1
+  shift
+
+  commit=$1
+  shift
+
+  range=$(git show $commit | grep Merge: | awk '{print $2 "..." $3}')
+
+  echo "git $cmd $range $@"
+
+  if test -z $range
+  then
+    echo "No merge detected"
+    return 1
+  fi
+
+  git $cmd $range $@
+}

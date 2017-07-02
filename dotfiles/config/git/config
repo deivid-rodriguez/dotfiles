@@ -8,6 +8,7 @@
   type = cat-file -t
   dump = cat-file -p
   edit = !". ~/.config/git/edit && git_edit"
+  range = !". ~/.config/git/range && git_range"
 
 [commit]
   cleanup = scissors
