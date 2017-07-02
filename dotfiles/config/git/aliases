@@ -13,3 +13,22 @@ git_conflicts() {
     (cd "$top_level" && nvim "$files")
   fi
 }
+
+#
+# Edit all changed files
+#
+git_changed() {
+  git status --porcelain | awk '{print $2}' | xargs nvim
+}
+
+#
+# Edit extension to git
+#
+git_edit() {
+  if test "$1" = "--conflicts"
+  then
+    git_conflicts
+  else
+    git_changed
+  fi
+}

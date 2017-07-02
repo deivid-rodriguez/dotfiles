@@ -7,7 +7,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   type = cat-file -t
   dump = cat-file -p
-  conflicts = !". ~/.config/git/aliases && git_conflicts"
+  edit = !". ~/.config/git/aliases && git_edit"
 
 [commit]
   cleanup = scissors
