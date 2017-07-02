@@ -1,0 +1,15 @@
+#
+# Edit all files with merge conflicts
+#
+git_conflicts() {
+  top_level=$(git rev-parse --show-toplevel)
+
+  files=$(git diff --name-only --diff-filter=U)
+
+  if test -z "$files"
+  then
+    echo "There's no conflicts in the current working tree"
+  else
+    (cd "$top_level" && nvim "$files")
+  fi
+}

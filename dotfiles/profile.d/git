@@ -15,21 +15,3 @@ function pr_review {
 
   git show "${revisions[@]}"
 }
-
-#
-# Edit all files with merge conflicts
-#
-function edit_conflicts {
-  top_level=$(git rev-parse --show-toplevel)
-
-  files=$(git diff --name-only --diff-filter=U)
-
-  if [ -z "$files" ]
-  then
-    echo "There's no conflicts in the current working tree"
-  else
-    files=($files)
-
-    (cd "$top_level" && nvim "${files[@]}")
-  fi
-}
