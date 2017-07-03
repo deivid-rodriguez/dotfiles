@@ -10,7 +10,7 @@ git_conflicts() {
   then
     echo "There's no conflicts in the current working tree"
   else
-    (cd "$top_level" && nvim "$files")
+    (cd "$top_level" && echo "$files" | xargs nvim )
   fi
 }
 
