@@ -1,0 +1,34 @@
+#
+# Edit all files with merge conflicts
+#
+git_conflicts() {
+  top_level=$(git rev-parse --show-toplevel)
+
+  files=$(git diff --name-only --diff-filter=U)
+
+  if test -z "$files"
+  then
+    echo "There's no conflicts in the current working tree"
+  else
+    (cd "$top_level" && echo "$files" | xargs nvim )
+  fi
+}
+
+#
+# Edit all changed files
+#
+git_changed() {
+  git status --porcelain | awk '{print $2}' | xargs nvim
+}
+
+#
+# Edit extension to git
+#
+git_edit() {
+  if test "$1" = "--conflicts"
+  then
+    git_conflicts
+  else
+    git_changed
+  fi
+}

@@ -15,15 +15,3 @@ function pr_review {
 
   git show "${revisions[@]}"
 }
-
-#
-# Edit all files with merge conflicts
-#
-function edit_conflicts {
-  top_level=$(git rev-parse --show-toplevel)
-
-  files=$(git diff --name-only --diff-filter=U)
-  files=($files)
-
-  (cd "$top_level" && nvim "${files[@]}")
-}

@@ -1,6 +1,6 @@
 ---
 
-hub_version: 2.3.0-pre9
+hub_version: 2.3.0-pre10
 hub_repo: https://github.com/github/hub
 hub_folder: hub-linux-amd64-{{hub_version}}
 hub_archive: "{{hub_folder}}.tgz"
