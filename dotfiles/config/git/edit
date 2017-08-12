@@ -25,10 +25,13 @@ git_edit_changed() {
 # Edit extension to git
 #
 git_edit() {
-  if test "$1" = "--conflicts"
-  then
+  case "$1" in
+  --conflicts)
     git_edit_conflicts
-  else
+    break
+    ;;
+  *)
     git_edit_changed
-  fi
+    ;;
+  esac
 }
