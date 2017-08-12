@@ -15,3 +15,16 @@ function pr_review {
 
   git show "${revisions[@]}"
 }
+
+#
+# Adds a trailing new line to every non-binary non-vendored file tracked by git
+#
+function normalize_new_lines {
+  for file in $(git grep --cached -Il '' | grep -v /vendor/)
+  do
+    if [ -n "$(tail -c 1 < "$file")" ]
+    then
+      echo >> "$file"
+    fi
+  done
+}
