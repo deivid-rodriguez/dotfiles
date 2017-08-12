@@ -22,12 +22,23 @@ git_edit_changed() {
 }
 
 #
+# Edit all changed in the previous commit
+#
+git_edit_last() {
+  git show --name-only --pretty= | xargs nvim
+}
+
+#
 # Edit extension to git
 #
 git_edit() {
   case "$1" in
   --conflicts)
     git_edit_conflicts
+    break
+    ;;
+  --last)
+    git_edit_last
     break
     ;;
   *)
