@@ -2,6 +2,12 @@
 # Shows full merge commit changes
 #
 git_range() {
+  if test "$#" -neq 2
+  then
+    echo "Usage: git range <cmd> <sha1>"
+    return 1
+  fi
+
   cmd=$1
   shift
 
