@@ -1,7 +1,7 @@
 #
 # Edit all files with merge conflicts
 #
-git_conflicts() {
+git_edit_conflicts() {
   top_level=$(git rev-parse --show-toplevel)
 
   files=$(git diff --name-only --diff-filter=U)
@@ -17,7 +17,7 @@ git_conflicts() {
 #
 # Edit all changed files
 #
-git_changed() {
+git_edit_changed() {
   git status --porcelain | awk '{print $2}' | xargs nvim
 }
 
@@ -27,8 +27,8 @@ git_changed() {
 git_edit() {
   if test "$1" = "--conflicts"
   then
-    git_conflicts
+    git_edit_conflicts
   else
-    git_changed
+    git_edit_changed
   fi
 }
