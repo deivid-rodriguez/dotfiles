@@ -28,3 +28,10 @@ function normalize_new_lines {
     fi
   done
 }
+
+#
+# Finds all different file extensions on a project
+#
+function project_extensions {
+  git ls-tree -r HEAD --name-only | perl -ne 'print "*.$1" if m/[^^\/]\.([^.\/]+)$/' | sort -u
+}
