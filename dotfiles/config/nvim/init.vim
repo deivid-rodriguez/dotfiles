@@ -117,6 +117,11 @@ let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
 
 let g:neomake_scss_enabled_makers = ['stylelint']
 
+let s:shellcheck_args = ['-x', '-fgcc'] + split(globpath('.', '**/*.sh'), '\n')
+let g:neomake_shellcheck_maker = { 'exe': 'shellcheck', 'args': s:shellcheck_args }
+
+let g:neomake_enabled_makers = ['shellcheck']
+
 autocmd! BufWritePost * Neomake
 
 "
