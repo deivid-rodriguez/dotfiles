@@ -15,7 +15,7 @@ Style/ModuleFunction:
   Enabled: false
 
 Style/Lambda:
-  Enabled: false
+  EnforcedStyle: literal
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
