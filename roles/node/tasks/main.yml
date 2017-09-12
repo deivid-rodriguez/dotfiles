@@ -22,3 +22,9 @@
     name: stylelint
     global: yes
     state: latest
+
+- name: Install eslint
+  npm:
+    name: eslint
+    global: yes
+    state: latest
