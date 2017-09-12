@@ -1,16 +1,16 @@
 [Default Applications]
-text/html=firefox.desktop
+text/html=chromium-browser.desktop
 application/x-bittorrent=frostwire.desktop
-application/x-extension-htm=firefox.desktop
-application/x-extension-html=firefox.desktop
-application/x-extension-shtml=firefox.desktop
-application/x-extension-xht=firefox.desktop
-application/x-extension-xhtml=firefox.desktop
-application/xhtml+xml=firefox.desktop
-x-scheme-handler/about=firefox.desktop
+application/x-extension-htm=chromium-browser.desktop
+application/x-extension-html=chromium-browser.desktop
+application/x-extension-shtml=chromium-browser.desktop
+application/x-extension-xht=chromium-browser.desktop
+application/x-extension-xhtml=chromium-browser.desktop
+application/xhtml+xml=chromium-browser.desktop
+x-scheme-handler/about=chromium-browser.desktop
 x-scheme-handler/chrome=google-chrome.desktop
-x-scheme-handler/ftp=firefox.desktop
-x-scheme-handler/http=firefox.desktop
-x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=chromium-browser.desktop
+x-scheme-handler/http=chromium-browser.desktop
+x-scheme-handler/https=chromium-browser.desktop
 x-scheme-handler/magnet=frostwire.desktop
 x-scheme-handler/tg=telegramdesktop.desktop
