@@ -113,7 +113,7 @@ set mousemodel=popup
 let g:neomake_ruby_rubocop_maker = { 'args': ['--display-cop-names'] }
 let g:neomake_ruby_enabled_makers = ['rubocop']
 
-let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 let g:neomake_scss_enabled_makers = ['stylelint']
 
