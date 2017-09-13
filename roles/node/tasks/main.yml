@@ -11,20 +11,11 @@
     update_cache: yes
     state: latest
 
-- name: Upgrade npm
+- name: Install js packages
   npm:
-    name: npm
+    name: "{{item}}"
     global: yes
     state: latest
-
-- name: Install stylelint
-  npm:
-    name: stylelint
-    global: yes
-    state: latest
-
-- name: Install eslint
-  npm:
-    name: eslint
-    global: yes
-    state: latest
+  with_items:
+    - stylelint
+    - eslint
