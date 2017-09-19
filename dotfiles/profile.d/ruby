@@ -16,7 +16,7 @@ function enable_auto_chruby {
 
 enable_auto_chruby
 
-chruby 2.4.1
+chruby 2.4.2
 
 #
 # JRUBY_OPTS to make jruby startup time acceptable
