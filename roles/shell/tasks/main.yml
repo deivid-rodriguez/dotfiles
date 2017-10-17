@@ -1,8 +1,7 @@
 ---
 
 - name: Install tmux
-  become: true
-  apt:
+  homebrew:
     name: tmux
     state: latest
 
