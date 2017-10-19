@@ -10,6 +10,9 @@
   edit = !". ~/.config/git/edit && git_edit"
   range = !". ~/.config/git/range && git_range"
 
+[credential]
+  helper = cache --timeout=3600
+
 [commit]
   cleanup = scissors
 
@@ -26,7 +29,7 @@
   prune = true
 
 [hub]
-  protocol = ssh
+  protocol = https
 
 [push]
   default = simple
