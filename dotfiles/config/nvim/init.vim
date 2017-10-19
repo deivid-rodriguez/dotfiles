@@ -14,9 +14,6 @@ call plug#begin()
 " Colorscheme
 Plug 'freeo/vim-kalisi'
 
-" Git utils
-Plug 'tpope/vim-fugitive'
-
 " Syntax checker
 Plug 'neomake/neomake'
 
