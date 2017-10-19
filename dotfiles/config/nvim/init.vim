@@ -112,7 +112,13 @@ set mousemodel=popup
 "
 " Syntax
 "
-let g:neomake_ruby_rubocop_maker = { 'args': ['--display-cop-names'] }
+let s:rubocop_home = systemlist('bundle show rubocop')[0]
+let s:rubocop_bin = join([s:rubocop_home, 'bin', 'rubocop'], '/')
+let g:neomake_ruby_rubocop_maker = {
+  \ 'args': ['--force-exclusion', '--display-cop-names'],
+  \ 'exe': s:rubocop_bin
+  \ }
+
 let g:neomake_ruby_enabled_makers = ['rubocop']
 
 let g:neomake_javascript_enabled_makers = ['eslint']
