@@ -1,23 +1,11 @@
 ---
 
-- name: Install tmux
-  become: true
-  apt:
-    name: tmux
-    state: latest
-
-- name: Install shellcheck
+- name: Shell dependencies
   homebrew:
-    name: shellcheck
+    name: "{{item}}"
     state: latest
-
-- name: Install ag
-  become: true
-  apt:
-    name: silversearcher-ag
-    state: latest
-
-- name: Install direnv
-  become: true
-  apt:
-    name: direnv
+  with_items:
+    - tmux
+    - shellcheck
+    - silversearcher-ag
+    - direnv
