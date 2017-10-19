@@ -9,15 +9,6 @@ function enable_chruby {
 
 enable_chruby
 
-function enable_auto_chruby {
-  # shellcheck disable=SC1090
-  source "$chruby_home/auto.sh"
-}
-
-enable_auto_chruby
-
-chruby 2.4.2
-
 #
 # JRUBY_OPTS to make jruby startup time acceptable
 #

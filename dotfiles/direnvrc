@@ -1,0 +1,9 @@
+# Usage: use ruby <version>
+#
+# Loads the specified ruby version into the environent
+#
+use_ruby() {
+  source "$HOME/.profile.d/ruby"
+
+  chruby $1
+}
