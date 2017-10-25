@@ -42,6 +42,9 @@ Plug 'slim-template/vim-slim'
 " CoffeeScript enhancements
 Plug 'kchmck/vim-coffee-script'
 
+" Typescript enhancements
+Plug 'leafgarland/typescript-vim'
+
 " Ctags generation
 Plug 'szw/vim-tags'
 
