@@ -7,5 +7,5 @@
   with_items:
     - tmux
     - shellcheck
-    - silversearcher-ag
+    - the_silver_searcher
     - direnv
