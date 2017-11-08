@@ -2,7 +2,7 @@
 
 - name: Setup nodejs repo sources
   apt_repository:
-    repo: deb https://deb.nodesource.com/node_8.x xenial main
+    repo: deb https://deb.nodesource.com/node_9.x xenial main
     state: present
 
 - name: Install nodejs
