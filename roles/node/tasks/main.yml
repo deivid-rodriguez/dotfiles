@@ -18,5 +18,5 @@
     state: latest
   with_items:
     - stylelint
-    - eslint
+    - eslint-cli
     - livedown
