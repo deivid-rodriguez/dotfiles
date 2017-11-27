@@ -13,4 +13,4 @@ fi
 #
 # Default options for rg
 #
-alias rg='rg --hidden'
+alias rg='rg --hidden --ignore-file ~/.ignore'
