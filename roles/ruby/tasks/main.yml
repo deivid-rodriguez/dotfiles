@@ -15,12 +15,7 @@
     - libncurses5-dev
     - libffi-dev
 
-- name: Install ruby-install
+- name: Install rbenv
   homebrew:
-    name: ruby-install
-    state: latest
-
-- name: Install chruby
-  homebrew:
-    name: chruby
+    name: rbenv
     state: latest

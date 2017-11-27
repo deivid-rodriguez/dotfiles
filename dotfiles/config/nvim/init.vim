@@ -63,9 +63,6 @@ Plug 'mustache/vim-mustache-handlebars'
 " Finish requiring Vundle plugins
 call plug#end()
 
-" Workaround for very slow startup on JRUBY + chruby
-let g:ruby_path = system('echo $RUBIES')
-
 " Enable filetype detection and filetype-specific indenting & plugins.
 filetype plugin indent on
 
