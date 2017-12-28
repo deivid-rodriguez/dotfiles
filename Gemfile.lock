@@ -14,7 +14,7 @@ GEM
       ast (~> 2.3)
     powerpack (0.1.1)
     rainbow (3.0.0)
-    rubocop (0.52.0)
+    rubocop (0.52.1)
       parallel (~> 1.10)
       parser (>= 2.4.0.2, < 3.0)
       powerpack (~> 0.1)
@@ -29,7 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   mdl (= 0.4.0)
-  rubocop (= 0.52.0)
+  rubocop (= 0.52.1)
 
 RUBY VERSION
    ruby 2.4.3p205
