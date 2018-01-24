@@ -89,22 +89,10 @@ load_language_customizations
 unset load_language_customizations
 
 # shellcheck disable=SC1090
-function load_aliases {
-  if [ -f "$HOME/.bash_aliases" ]; then
-    source "$HOME/.bash_aliases"
-  fi
-}
-
-load_aliases
+source "$HOME/.bash_aliases"
 
 # shellcheck disable=SC1090
-function load_completions {
-  if [ -f "$HOME/.bash_completion" ]; then
-    source "$HOME/.bash_completion"
-  fi
-}
-
-load_completions
+source "$HOME/.bash_completion"
 
 #
 # Set some color variables
