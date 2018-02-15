@@ -5,20 +5,38 @@ AllCops:
 
   TargetRubyVersion: 2.4
 
+Metrics:
+  Enabled: false
+
 Rails:
-  Enabled: true
+  Enabled: false
 
 Layout/ExtraSpacing:
-  Enabled: true
+  AllowForAlignment: false
 
-Style/ModuleFunction:
+Lint/InterpolationCheck:
   Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/TrivialAccessors:
+  ExactNameMatch: true
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
 
 Style/Lambda:
   EnforcedStyle: literal
 
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+
+Style/RaiseArgs:
+  Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
-Performance/Casecmp:
-  Enabled: false

@@ -2,8 +2,6 @@
 
 eval "$(rbenv init -)"
 
-export BUNDLE_PATH=.bundle
-
 #
 # JRUBY_OPTS to make jruby startup time acceptable
 #
