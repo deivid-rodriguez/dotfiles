@@ -123,7 +123,7 @@ let g:neomake_shellcheck_maker = { 'exe': 'shellcheck', 'args': s:shellcheck_arg
 
 let g:neomake_enabled_makers = ['shellcheck']
 
-autocmd! BufWritePost * Neomake
+call neomake#configure#automake('w')
 
 "
 " Swap files
