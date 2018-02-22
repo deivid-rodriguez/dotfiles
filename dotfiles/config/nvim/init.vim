@@ -175,14 +175,10 @@ map <leader>c "*yw
 set pastetoggle=<F9>
 
 "
-" Settings for specific dirs
-"
-autocmd BufNewFile,BufRead ~/Proyectos/ruby/* set tabstop=8 nolist
-
-"
-" Settings for specific dirs
+" Settings for specific files
 "
 autocmd BufNewFile,BufRead *.js.es6 set filetype=javascript
+autocmd BufNewFile,BufRead *.arb set filetype=ruby
 
 "
 " Filetype autocompletion
