@@ -15,7 +15,7 @@ call plug#begin()
 Plug 'freeo/vim-kalisi'
 
 " Syntax checker
-Plug 'neomake/neomake'
+Plug 'w0rp/ale'
 
 " Fuzzy file, buffer, mru, tag finder
 Plug 'kien/ctrlp.vim'
@@ -112,20 +112,13 @@ set mousemodel=popup
 "
 " Syntax
 "
-let g:neomake_ruby_enabled_makers = ['rubocop']
-
-let g:neomake_javascript_enabled_makers = ['eslint']
-
-let g:neomake_scss_enabled_makers = ['stylelint']
-
-let g:neomake_yaml_enabled_makers = ['yamllint']
-
-let s:shellcheck_args = ['-x', '-fgcc'] + split(globpath('.', '**/*.sh'), '\n')
-let g:neomake_shellcheck_maker = { 'exe': 'shellcheck', 'args': s:shellcheck_args }
-
-let g:neomake_enabled_makers = ['shellcheck']
-
-call neomake#configure#automake('w')
+let g:ale_linters = {
+  \ 'ruby': ['rubocop'],
+  \ 'javascript': ['eslint'],
+  \ 'scss': ['stylelint'],
+  \ 'yaml': ['yamllint'],
+  \ 'bash': ['shellcheck']
+  \}
 
 "
 " Swap files
@@ -151,7 +144,7 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 let g:test#preserve_screen = 1
-let test#strategy = "neomake"
+let test#strategy = "neovim"
 
 "
 " Misc maps
