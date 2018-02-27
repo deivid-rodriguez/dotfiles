@@ -5,6 +5,7 @@
     name: "{{item}}"
     state: latest
   with_items:
+    - fd
     - tmux
     - shellcheck
     - rg
