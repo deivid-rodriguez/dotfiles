@@ -226,4 +226,4 @@ colorscheme kalisi
 "
 " Grepping tool
 "
-set grepprg=ag
+set grepprg=rg
