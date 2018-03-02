@@ -10,6 +10,7 @@ eval "$(hub alias -s)"
 #
 function pr_review {
   revisions=$(git log origin/master...HEAD --pretty=format:%h ; echo)
+  revisions=$(echo "$revisions" | tac)
   mapfile -t revisions <<< "$revisions"
 
   git show "${revisions[@]}"
