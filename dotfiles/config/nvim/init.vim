@@ -174,7 +174,7 @@ autocmd BufNewFile,BufRead *.js.es6 set filetype=javascript
 autocmd BufNewFile,BufRead *.arb set filetype=ruby
 
 "
-" Filetype autocompletion
+" Filetype configurations
 "
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
