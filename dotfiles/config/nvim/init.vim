@@ -174,20 +174,27 @@ autocmd BufNewFile,BufRead *.js.es6 set filetype=javascript
 autocmd BufNewFile,BufRead *.arb set filetype=ruby
 
 "
-" Filetype autocompletion
+" Filetype configurations
 "
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+
+autocmd FileType diff set nowrap textwidth=0
+
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+autocmd FileType make set noexpandtab
+autocmd FileType make set nolist
+
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
-autocmd FileType make set noexpandtab
-autocmd FileType make set nolist
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
 "
 " Ctrl-P
@@ -226,4 +233,4 @@ colorscheme kalisi
 "
 " Grepping tool
 "
-set grepprg=ag
+set grepprg=rg
