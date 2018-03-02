@@ -178,6 +178,8 @@ autocmd BufNewFile,BufRead *.arb set filetype=ruby
 "
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+autocmd FileType diff set nowrap textwidth=0
+
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
