@@ -6,17 +6,6 @@
 eval "$(hub alias -s)"
 
 #
-# Review every commit on a branch, oldest to newest
-#
-function pr_review {
-  revisions=$(git log origin/master...HEAD --pretty=format:%h ; echo)
-  revisions=$(echo "$revisions" | tac)
-  mapfile -t revisions <<< "$revisions"
-
-  git show "${revisions[@]}"
-}
-
-#
 # Adds a trailing new line to every non-binary non-vendored file tracked by git
 #
 function normalize_new_lines {

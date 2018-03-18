@@ -9,6 +9,7 @@
   dump = cat-file -p
   edit = !"bash -c '. ~/.config/git/edit && git_edit'"
   range = !"bash -c '. ~/.config/git/range && git_range'"
+  review = !"bash -c '. ~/.config/git/review && git_review'"
 
 [credential]
   helper = cache --timeout=86400
