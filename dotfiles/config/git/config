@@ -7,9 +7,9 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   type = cat-file -t
   dump = cat-file -p
-  edit = !"bash -c '. ~/.config/git/edit && git_edit'"
-  range = !"bash -c '. ~/.config/git/range && git_range'"
-  review = !"bash -c '. ~/.config/git/review && git_review'"
+  edit = !"bash -c 'source ~/.config/git/edit && git_edit'"
+  range = !"bash -c 'source ~/.config/git/range && git_range'"
+  review = !"bash -c 'source ~/.config/git/review && git_review'"
 
 [credential]
   helper = cache --timeout=86400
