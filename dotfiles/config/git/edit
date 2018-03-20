@@ -35,11 +35,9 @@ git_edit() {
   case "$1" in
   --conflicts)
     git_edit_conflicts
-    break
     ;;
   --last)
     git_edit_last
-    break
     ;;
   *)
     git_edit_changed
