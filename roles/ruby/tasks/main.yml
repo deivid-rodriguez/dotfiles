@@ -19,3 +19,8 @@
   homebrew:
     name: rbenv
     state: latest
+
+- name: Install ruby-build
+  homebrew:
+    name: ruby-build
+    state: latest
