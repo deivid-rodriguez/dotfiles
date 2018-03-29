@@ -3,19 +3,17 @@
 - name: Setup nodejs repo sources
   apt_repository:
     repo: deb https://deb.nodesource.com/node_9.x xenial main
-    state: present
 
 - name: Install nodejs
   apt:
     name: nodejs
-    update_cache: yes
     state: latest
 
 - name: Install js packages
   npm:
     name: "{{item}}"
     global: yes
-    state: latest
+    state: present
   with_items:
     - stylelint
     - eslint-cli

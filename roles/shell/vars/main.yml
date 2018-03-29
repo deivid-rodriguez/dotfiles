@@ -1,0 +1,11 @@
+---
+
+fd_version: 7.0.0
+fd_repo: https://github.com/sharkdp/fd
+fd_deb: "fd-musl_{{fd_version}}_amd64.deb"
+fd_url: "{{fd_repo}}/releases/download/v{{fd_version}}/{{fd_deb}}"
+
+rg_version: 0.8.1
+rg_repo: https://github.com/BurntSushi/ripgrep
+rg_deb: "ripgrep_{{rg_version}}_amd64.deb"
+rg_url: "{{rg_repo}}/releases/download/{{rg_version}}/{{rg_deb}}"

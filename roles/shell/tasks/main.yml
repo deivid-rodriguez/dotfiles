@@ -1,12 +1,20 @@
 ---
 
+- name: Install fd
+  become: true
+  apt:
+    deb: "{{fd_url}}"
+
+- name: Install rg
+  become: true
+  apt:
+    deb: "{{rg_url}}"
+
 - name: Shell dependencies
   homebrew:
     name: "{{item}}"
     state: latest
   with_items:
-    - fd
     - tmux
     - shellcheck
-    - rg
     - direnv
