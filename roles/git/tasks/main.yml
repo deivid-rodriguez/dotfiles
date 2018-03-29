@@ -5,10 +5,6 @@
     name: git
     state: latest
 
-- name: Memorize hub installation path
-  stat: path=/usr/local/bin/hub
-  register: hub
-
 - name: Memorize hub version
   shell: "hub --version | grep hub | cut -d' ' -f3"
   register: hub_installed_version
