@@ -13,7 +13,7 @@
   npm:
     name: "{{item}}"
     global: yes
-    state: latest
+    state: present
   with_items:
     - stylelint
     - eslint-cli
