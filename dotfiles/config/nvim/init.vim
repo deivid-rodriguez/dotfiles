@@ -120,11 +120,7 @@ let g:ale_linters = {
   \ 'bash': ['shellcheck']
   \}
 
-let s:rubocop_bin = join(['bin', 'rubocop'], '/')
-
-if filereadable(s:rubocop_bin)
-  let g:ale_ruby_rubocop_executable = s:rubocop_bin
-endif
+let g:ale_ruby_rubocop_executable = "bundle"
 
 "
 " Swap files
