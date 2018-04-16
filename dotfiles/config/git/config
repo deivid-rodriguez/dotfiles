@@ -32,6 +32,9 @@
 [hub]
   protocol = https
 
+[pull]
+  rebase = true
+
 [push]
   default = simple
 
