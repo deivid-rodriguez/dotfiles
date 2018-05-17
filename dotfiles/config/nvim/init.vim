@@ -23,6 +23,9 @@ Plug 'kien/ctrlp.vim'
 " BufExplorer
 Plug 'jlanzarotta/bufexplorer'
 
+" Docker syntax
+Plug 'docker/docker', { 'rtp': '/contrib/syntax/vim/' }
+
 " Ruby enhancements
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
