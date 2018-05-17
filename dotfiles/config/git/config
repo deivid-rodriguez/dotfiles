@@ -32,10 +32,6 @@
 [hub]
   protocol = https
 
-[merge "bundler"]
-  name = Resolve Gemfile.lock conflicts by running `bundle lock`
-  driver = bundle lock
-
 [pull]
   rebase = true
 
