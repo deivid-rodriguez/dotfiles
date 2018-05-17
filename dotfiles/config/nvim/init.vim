@@ -116,11 +116,10 @@ set mousemodel=popup
 " Syntax
 "
 let g:ale_linters = {
-  \ 'ruby': ['rubocop'],
   \ 'javascript': ['eslint'],
+  \ 'ruby': ['rubocop'],
   \ 'scss': ['stylelint'],
   \ 'yaml': ['yamllint'],
-  \ 'bash': ['shellcheck']
   \}
 
 let g:ale_ruby_rubocop_executable = "bundle"
