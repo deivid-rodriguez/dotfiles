@@ -2,7 +2,8 @@
 # Review every commit on a branch, oldest to newest
 #
 git_review() {
-  revisions=$(git log origin/master...HEAD --pretty=format:%h ; echo)
+  remote=$(git remote | grep "^upstream$" || echo "origin")
+  revisions=$(git log $remote/master...HEAD --pretty=format:%h ; echo)
   revisions=$(echo "$revisions" | tac)
   mapfile -t revisions <<< "$revisions"
 
