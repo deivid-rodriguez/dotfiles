@@ -1,0 +1,51 @@
+---
+
+version: 2
+
+jobs:
+  ruby_linters:
+    docker:
+      - image: ruby:2.5.1
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - bundler-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Install dependencies
+          command: bundle install
+
+      - save_cache:
+          key: bundler-dependencies-{{ checksum "Gemfile.lock" }}
+          paths:
+            - /usr/local/bundle
+
+      - run:
+          name: Run rubocop
+          command: bin/rubocop
+
+      - run:
+          name: Run markdownlint
+          command: bin/mdl README.md
+
+  shellcheck:
+    docker:
+      - image: koalaman/shellcheck-alpine
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run shellcheck
+          command: bin/shellcheck.sh
+
+workflows:
+  version: 2
+
+  lint:
+    jobs:
+      - ruby_linters
+      - shellcheck
