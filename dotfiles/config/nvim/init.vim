@@ -126,6 +126,7 @@ let g:ale_linters = {
   \}
 
 let g:ale_ruby_rubocop_executable = "bundle"
+let g:ale_markdown_mdl_executable = "bundle"
 
 "
 " Swap files
