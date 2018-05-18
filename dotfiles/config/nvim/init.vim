@@ -23,6 +23,9 @@ Plug 'kien/ctrlp.vim'
 " BufExplorer
 Plug 'jlanzarotta/bufexplorer'
 
+" Docker syntax
+Plug 'docker/docker', { 'rtp': '/contrib/syntax/vim/' }
+
 " Ruby enhancements
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -113,14 +116,17 @@ set mousemodel=popup
 " Syntax
 "
 let g:ale_linters = {
-  \ 'ruby': ['rubocop'],
+  \ 'bash': ['shellcheck'],
+  \ 'eruby': ['erb'],
   \ 'javascript': ['eslint'],
+  \ 'markdown': ['mdl'],
+  \ 'ruby': ['rubocop'],
   \ 'scss': ['stylelint'],
   \ 'yaml': ['yamllint'],
-  \ 'bash': ['shellcheck']
   \}
 
 let g:ale_ruby_rubocop_executable = "bundle"
+let g:ale_markdown_mdl_executable = "bundle"
 
 "
 " Swap files
