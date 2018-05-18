@@ -116,7 +116,10 @@ set mousemodel=popup
 " Syntax
 "
 let g:ale_linters = {
+  \ 'bash': ['shellcheck'],
+  \ 'eruby': ['erb'],
   \ 'javascript': ['eslint'],
+  \ 'markdown': ['mdl'],
   \ 'ruby': ['rubocop'],
   \ 'scss': ['stylelint'],
   \ 'yaml': ['yamllint'],
