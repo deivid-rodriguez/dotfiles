@@ -4,6 +4,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 
 function download_it {
   curl -sSL https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > dotfiles/profile.d/prompt
+  curl -sSL https://git.zx2c4.com/password-store/plain/src/completion/pass.bash-completion > dotfiles/completion.d/pass
 }
 
 function sync_it {
