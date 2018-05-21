@@ -2,7 +2,11 @@
 
 # shellcheck disable=SC1090
 
-ruby_completions="$HOME/.completion.d/ruby"
+completions="$HOME/.completion.d"
+
+source "$completions/pass"
+
+ruby_completions="$completions/ruby"
 
 source "$ruby_completions/completion-bundle"
 source "$ruby_completions/completion-gem"
