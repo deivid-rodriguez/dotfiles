@@ -2,9 +2,6 @@
 
 # shellcheck disable=SC1090
 
-#
-# Custom user completions
-#
 ruby_completions="$HOME/.completion.d/ruby"
 
 source "$ruby_completions/completion-bundle"
