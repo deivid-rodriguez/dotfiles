@@ -13,9 +13,9 @@ GEM
     parallel (1.12.1)
     parser (2.5.1.0)
       ast (~> 2.4.0)
-    powerpack (0.1.1)
+    powerpack (0.1.2)
     rainbow (3.0.0)
-    rubocop (0.57.1)
+    rubocop (0.57.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5)
@@ -31,7 +31,7 @@ PLATFORMS
 
 DEPENDENCIES
   mdl (= 0.4.0)
-  rubocop (= 0.57.1)
+  rubocop (= 0.57.2)
 
 RUBY VERSION
    ruby 2.5.1p57
