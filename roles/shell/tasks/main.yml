@@ -15,6 +15,5 @@
     name: "{{item}}"
     state: latest
   with_items:
-    - tmux
     - shellcheck
     - direnv
