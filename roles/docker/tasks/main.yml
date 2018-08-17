@@ -3,7 +3,7 @@
 - name: Setup repo sources
   apt_repository:
     filename: docker
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
     state: present
 
 - name: Setup apt key
