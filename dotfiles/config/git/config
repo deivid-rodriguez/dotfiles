@@ -16,6 +16,7 @@
 
 [commit]
   cleanup = scissors
+  gpgsign = true
 
 [content]
   editor = nvim -w
@@ -41,3 +42,4 @@
 [user]
   email = deivid.rodriguez@riseup.net
   name = David Rodríguez
+  signingkey = 1008A258BB37309C
