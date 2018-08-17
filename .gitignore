@@ -1,2 +1,2 @@
-dotfiles/profile.d/prompt
-dotfiles/completion.d/pass
+profile.d/prompt
+completion.d/pass
