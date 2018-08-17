@@ -3,14 +3,14 @@
 shellcheck \
   bin/shellcheck.sh \
   bootstrap.sh \
-  dotfiles/bash_aliases \
-  dotfiles/bash_completion \
-  dotfiles/bash_profile \
-  dotfiles/profile \
-  dotfiles/profile.d/git \
-  dotfiles/profile.d/latex \
-  dotfiles/profile.d/linuxbrew \
-  dotfiles/profile.d/media \
-  dotfiles/profile.d/paths \
-  dotfiles/profile.d/ruby \
-  dotfiles/profile.d/utils
+  bash_aliases \
+  bash_completion \
+  bash_profile \
+  profile \
+  profile.d/git \
+  profile.d/latex \
+  profile.d/linuxbrew \
+  profile.d/media \
+  profile.d/paths \
+  profile.d/ruby \
+  profile.d/utils

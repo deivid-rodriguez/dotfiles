@@ -3,18 +3,29 @@
 cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 
 function download_it {
-  curl -sSL https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > dotfiles/profile.d/prompt
-  curl -sSL https://git.zx2c4.com/password-store/plain/src/completion/pass.bash-completion > dotfiles/completion.d/pass
+  curl -sSL https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > profile.d/prompt
+  curl -sSL https://git.zx2c4.com/password-store/plain/src/completion/pass.bash-completion > completion.d/pass
 }
 
 function sync_it {
-  rsync -ah --delete dotfiles/profile.d/ ~/.profile.d
-  rsync -ah --delete dotfiles/completion.d/ ~/.completion.d
-  rsync -ah dotfiles/config/ ~/.config
-  rsync -ah dotfiles/local/ ~/.local
+  rsync -ah --delete profile.d/ ~/.profile.d
+  rsync -ah --delete completion.d/ ~/.completion.d
+  rsync -ah config/ ~/.config
+  rsync -ah local/ ~/.local
 
-  files=$(find dotfiles -maxdepth 1 -mindepth 1 -type f)
-  for f in $files
+  files=(
+    irbrc
+    bash_completion
+    profile
+    ruby-version
+    bash_aliases
+    pryrc
+    byebugrc
+    gemrc
+    bash_profile
+  )
+
+  for f in "${files[@]}"
   do
     rsync -ah --delete "$f" "$HOME/.$(basename "$f")"
   done
