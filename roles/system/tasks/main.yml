@@ -5,11 +5,6 @@
     name: gir1.2-gtop-2.0
     state: latest
 
-- name: Install Hamster Indicator
-  apt:
-    name: hamster-indicator
-    state: latest
-
 - name: Configure file watching
   sysctl:
     name: fs.inotify.max_user_watches
