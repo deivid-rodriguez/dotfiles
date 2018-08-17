@@ -1,7 +1,0 @@
----
-
-hub_version: 2.5.0
-hub_repo: https://github.com/github/hub
-hub_folder: hub-linux-amd64-{{hub_version}}
-hub_archive: "{{hub_folder}}.tgz"
-hub_url: "{{hub_repo}}/releases/download/v{{hub_version}}/{{hub_archive}}"

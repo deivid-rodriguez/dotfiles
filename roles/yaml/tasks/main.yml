@@ -1,6 +1,0 @@
----
-
-- name: Install yamllint
-  apt:
-    name: yamllint
-    state: latest
