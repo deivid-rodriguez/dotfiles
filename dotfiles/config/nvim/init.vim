@@ -54,9 +54,6 @@ Plug 'szw/vim-tags'
 " Track UltiSnips (the engine)
 Plug 'SirVer/ultisnips'
 
-" Seamless navigation between tmux panes and vim splits
-Plug 'christoomey/vim-tmux-navigator'
-
 " Fast tests in vim
 Plug 'janko-m/vim-test'
 

@@ -1,18 +1,9 @@
 ---
 
-- name: Install prerrequisites
-  apt:
-    name: "{{item}}"
-    state: latest
-  with_items:
-    - linux-image-generic
-    - linux-image-extra-{{ansible_kernel}}
-    - linux-image-extra-virtual
-
 - name: Setup repo sources
   apt_repository:
     filename: docker
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
     state: present
 
 - name: Setup apt key
@@ -41,14 +32,15 @@
     groups: docker
     append: yes
 
-- name: Detect docker-compose version
-  shell: "docker-compose --version | awk -F'[ ,]' '{ print $3 }'"
-  register: compose
-
 - name: Download docker-compose
   get_url:
     url: "{{compose_url}}"
     force: yes
-    dest: /usr/local/bin/docker-compose
+    dest: /usr/local/bin/docker-compose-{{compose_version}}
     mode: 0755
-  when: compose.stdout != compose_version
+
+- name: Symlink docker-compose to latest version
+  file:
+    src: /usr/local/bin/docker-compose-{{compose_version}}
+    dest: /usr/local/bin/docker-compose
+    state: link

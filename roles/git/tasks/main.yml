@@ -5,21 +5,27 @@
     name: git
     state: latest
 
-- name: Memorize hub version
-  shell: "hub --version | grep hub | cut -d' ' -f3"
-  register: hub_installed_version
-  ignore_errors: True
+- name: Create global src folder
+  file:
+    dest: /usr/local/src
+    state: directory
 
-- block:
-  - name: Download hub
-    get_url: url={{hub_url}} dest=/tmp
+- name: Download & extract hub sources
+  unarchive:
+    src: "{{hub_url}}"
+    dest: /usr/local/src
+    remote_src: yes
 
-  - name: Extract hub
-    unarchive: src=/tmp/{{hub_archive}} dest=/tmp
+- name: Install hub
+  copy:
+    src: /usr/local/src/{{hub_folder}}/bin/hub
+    dest: /usr/local/bin/
+    mode: 0755
 
-  - name: Install hub
-    command: /tmp/{{hub_folder}}/install
-
-  when:
-    - hub_installed_version is succeeded
-    - hub_installed_version.stdout is version_compare(hub_version, '<')
+- name: Install hub docs
+  copy:
+    src: "{{item}}"
+    dest: /usr/local/share/man/man1/
+    mode: 0644
+  with_fileglob:
+    - /usr/local/src/{{hub_folder}}/share/man/man1/*.1
