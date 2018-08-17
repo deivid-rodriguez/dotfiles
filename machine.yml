@@ -6,10 +6,10 @@
   - docker
   - git
   - node
+  - shell
   - system
 
 - hosts: localhost
   roles:
   - vim
   - ruby
-  - shell

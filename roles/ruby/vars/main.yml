@@ -1,0 +1,11 @@
+---
+
+rbenv_version: 1.1.1
+rbenv_repo: https://github.com/rbenv/rbenv
+rbenv_archive: v{{rbenv_version}}.tar.gz
+rbenv_url: "{{rbenv_repo}}/archive/{{rbenv_archive}}"
+
+ruby_build_version: 20180618
+ruby_build_repo: https://github.com/rbenv/ruby-build
+ruby_build_archive: v{{ruby_build_version}}.tar.gz
+ruby_build_url: "{{ruby_build_repo}}/archive/{{ruby_build_archive}}"

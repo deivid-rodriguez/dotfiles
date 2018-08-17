@@ -9,3 +9,12 @@ rg_version: 0.8.1
 rg_repo: https://github.com/BurntSushi/ripgrep
 rg_deb: "ripgrep_{{rg_version}}_amd64.deb"
 rg_url: "{{rg_repo}}/releases/download/{{rg_version}}/{{rg_deb}}"
+
+direnv_version: 2.17.0
+direnv_repo: https://github.com/direnv/direnv
+direnv_exe: direnv.linux-amd64
+direnv_url: "{{direnv_repo}}/releases/download/v{{direnv_version}}/{{direnv_exe}}"
+
+shellcheck_version: 0.5.0
+shellcheck_archive: shellcheck-v{{shellcheck_version}}.linux.x86_64.tar.xz
+shellcheck_url: https://storage.googleapis.com/shellcheck/{{shellcheck_archive}}
